@@ -1,0 +1,6 @@
+[book]
+authors = ["r3ntru3w4n9"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Learning Machine"
