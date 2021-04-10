@@ -1,0 +1,6 @@
+[book]
+authors = ["r3ntru3w4n9"]
+language = "zh"
+multilingual = true
+src = "src"
+title = "學習機器"
