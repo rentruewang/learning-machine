@@ -25,6 +25,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./en/book
+          destination_dir: en
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
 
@@ -33,5 +34,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./zh/book
+          destination_dir: zh
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
