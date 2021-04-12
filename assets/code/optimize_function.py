@@ -22,7 +22,5 @@ def formal_loss(F: Callable, sample_data: Pair) -> float:
 
 
 def optimize_function(F: Callable):
-    """
-    We are doing something to `F`'s parameter and hope that the function gets better
-    """
+    "We are doing something to `F`'s parameter and hope that the function gets better"
     F.parameter = 0

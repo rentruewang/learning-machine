@@ -1,4 +1,4 @@
-name: English 📖
+name: English
 on: [push]
 jobs:
   build-and-deploy-en:

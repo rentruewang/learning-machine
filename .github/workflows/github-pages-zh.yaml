@@ -1,4 +1,4 @@
-name: Chinese 📖
+name: Chinese
 on: [push]
 jobs:
   build-and-deploy-zh:

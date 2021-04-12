@@ -4,9 +4,7 @@ import mse_loss
 
 
 def loss_func(x: ndarray, y: ndarray) -> float:
-    """
-    What does the terrain look like? It looks like a bowl, the closer to the center the lower.
-    """
+    "What does the terrain look like? It looks like a bowl, the closer to the center the lower."
     return mse_loss.mse_loss(x, y)
 
 
