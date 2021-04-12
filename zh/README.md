@@ -2,6 +2,8 @@
 
 ## [學習機器學習指南](https://r3ntru3w4n9.github.io/learning-machine/zh)
 
+[![github-pages-en](https://github.com/r3ntru3w4n9/learning-machine/actions/workflows/github-pages-en.yaml/badge.svg)](https://github.com/r3ntru3w4n9/learning-machine/actions/workflows/github-pages-en.yaml) [![github-pages-zh](https://github.com/r3ntru3w4n9/learning-machine/actions/workflows/github-pages-zh.yaml/badge.svg)](https://github.com/r3ntru3w4n9/learning-machine/actions/workflows/github-pages-zh.yaml) [![format-python](https://github.com/r3ntru3w4n9/learning-machine/actions/workflows/format-python.yaml/badge.svg)](https://github.com/r3ntru3w4n9/learning-machine/actions/workflows/format-python.yaml)
+
 _**與魔鬼搏鬥者，要謹防自己也成為魔鬼。當你凝視深淵的時候，深淵也正在凝視著你。若是要了解機器學習，你必須得先學習機器。**_
 --- 我, 2021
 

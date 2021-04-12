@@ -1,30 +1,30 @@
-name: format-code
+name: Code style
 on: [push]
 jobs:
   format-all:
     runs-on: ubuntu-latest
     steps:
       # Global part
-      - name: Check out the repository
+      - name: 🔔 Check out the repository
         uses: actions/checkout@v2
 
       # Black (Python) part
-      - name: Setup python 3.8
+      - name: 🏗️ Setup python 3.8
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
-      - name: Install black
+      - name: ⬇️ Install black
         run: pip install black
       - name: Run black
         working-directory: ./assets/code/
         run: black .
 
       # Add and commit all
-      - name: Add and Commit all
+      - name: ⬆️ Add and Commit all
         uses: EndBug/add-and-commit@v7
         with:
-          user_name: "github-actions[bot]"
-          user_email: "github-actions[bot]@users.noreply.github.com"
+          author_name: "github-actions[bot]"
+          author_email: "github-actions[bot]@users.noreply.github.com"
           message: "🤖 R3nTru3W4n9 thinks you forgot to format your code!"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
