@@ -8,16 +8,16 @@ _**與魔鬼搏鬥者，要謹防自己也成為魔鬼。當你凝視深淵的�
 --- 我, 2021
 
 ## [中文版](./README.md)
-## [English version](../README.md)
+## [English version](../en/README.md)
 
 在這本手冊中，我會講解機器學習的基礎，包括許多方法背後的原理。
 
-### Disclaimer
+### 請注意
 
-This book assumes that you have at least some basic understanding of programming.
+本書預設讀者擁有對於編程有著基本的理解。
 
-## Contributing
+## 貢獻
 
-We take openess and inclusivity very seriously. We have adopted the following code of conduct.
+我們認為開放與包容是開源專案的唯一守則。我們有著以下的行文準則：
 
-[Contributor Code of conduct](CONTRIBUTING.md)
+[貢獻者行為準則](./CONTRIBUTING.md)

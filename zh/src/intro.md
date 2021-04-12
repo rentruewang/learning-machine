@@ -18,7 +18,7 @@ But Wikipedia says _"make predictions or decisions without being explicitly prog
 Usually when a program is created, the programmer writing it would design the program to do specific things. Your "Hello World" program is designed to log strings to the console. We all have the experience of finding a computer program, a website, or a mobile app, so dumb it's infuriating to use. It's likely because the designers of the program have failed to cover all the cases that a user might want to use it. **In other words, they haven't seen your use of the app, so they didn't consider it used this way.** This is where machine learnings might come to the rescue!
 
 ```python
-{{#include /assets/code/hello_world.py}}
+{{#include ./code/hello_world.py}}
 ```
 
 Alternatively, we design a program that's extensible, it acts according to data it receives. It _learns_ what is given to it. Now our problem of programs not doing what the users want is no more! Our program now automatically adapts to your users. And we have eliminated a lot of edge cases that we previously would have to write.

@@ -1,4 +1,4 @@
-# Objectives
+# What is a better function?
 
 After we have looked into the basic categories of machine learning functions, we want to ask ourselves a question. Since there are just an astronomical number of functions even the most basic models can represent (because every change in parameter can yeild a totally different function, we'll cover parameters of deep learning functions later), how do we know which function is the best one? _Turns out, in math, it's illegal to compare different vectors (an array of numbers), so our options are limited to scalars (single numbers)._ But what scalar?
 
@@ -11,13 +11,13 @@ The smaller the loss, the better the function is. Usually the loss is a positive
 ### Formally defined loss function:
 
 ```python
-{{#include ./code/formal_loss.py}}
+{{#include ../code/formal_loss.py}}
 ```
 
 ### Loosly defined loss function (the one used in PyTorch, TensorFlow, etc):
 
 ```python
-{{#include ./code/practice_loss.py}}
+{{#include ../code/practice_loss.py}}
 ```
 
 In practice you often see the loosly defined loss function instead of the formally defined loss function. It's more flexible, after all, and is better suited to be provided as a library function. However, it's more desirable to use the formally defiend loss function because it isn't the output of another function, and that makes our analysis easier.
@@ -35,7 +35,7 @@ Formula:
 Code:
 
 ```python
-{{#include ./code/mae_loss.py}}
+{{#include ../code/mae_loss.py}}
 ```
 
 ### Mean squared error:
@@ -49,7 +49,7 @@ Formula:
 Code:
 
 ```python
-{{#include ./code/mse_loss.py}}
+{{#include ../code/mse_loss.py}}
 ```
 
 #### Crossentropy loss:
@@ -63,7 +63,7 @@ Formula:
 Code:
 
 ```python
-{{#include ./code/ce_loss.py}}
+{{#include ../code/ce_loss.py}}
 ```
 
 ## Summary
