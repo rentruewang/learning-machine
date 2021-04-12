@@ -1,4 +1,4 @@
-# Optimization
+# How to get a great function?
 
 We have now have a function. We now what a good function is. Now, how do we get there? A naive way of trying to achieve that is to randomly choose parameters and cross our finger and hope that the function is good enough. However, the number of possible parameters is crazily large, so it's not a feasible solution. So how are the problem solved?
 
@@ -19,17 +19,17 @@ The input is a function \\(f\\) that we want to optimize (the ball that we want 
 Remember that we've said over and over that the function is determined by it's parameters? To optimize a function, we optimize its parameter. In this case, **the function parameters** is the position of the ball, and the **loss function output** is the value we want to minimize.
 
 ```python
-{{#include ./code/optimize_function.py}}
+{{#include ../code/optimize_function.py}}
 ```
 
-Now we get to the gradient part. _You can think of gradient as the steepest way uphill._ If you move along the gradient, you can increase the function value, in this case, the **loss function output** the fastest. So usually we want to move in the opposite direction (remember we are minimizing the function?). If we always move to the opposite direction of the gradient, we call this **stochastic gradient descent**.
+Now we get to the gradient part. _You can think of gradient as the steepest way uphill._ If you move along the gradient, you can increase the function value the fastest, in this case, you will increase the **loss function output**. So usually we want to move in the opposite direction of the gradient at a point (remember we are minimizing the function?). If we always move to the opposite direction of the gradient, we will eventually get a (local) minimum value of the function, we call this **stochastic gradient descent**.
 
 ### Stochastic Gradient Descent
 
-Stochastic gradient descent is the most common gradient descent method, and the most basic one. It involves only 3 varaibles, \\(x, y, lr, iter\\). \\(x\\) is your input variable, \\(y\\) is your output variable, and \\(lr\), learning rate, is a scalar showing how far you can move in one iteration. You repeat for \\(iter\\) iterations. For the ultimate quality we would want \\(lr\\) to be as small as possible (to not jump too far because you want to follow the terrain), and as many \\(iter\\) as possible (to ensure that the minimum is obtained). But it's not possible to do so in practice. Selecting \\(lr\\) and \\(iter\\) has become more art than science, and is often called **hyperparameter tuning** (parameter is for functions).
+Stochastic gradient descent is the most common gradient descent method, and the most basic one. It involves only 3 varaibles, \\(x, y, lr, iter\\). \\(x\\) is your input variable, \\(y\\) is your output variable, and \\(lr\\), learning rate, is a scalar showing how far you can move in one iteration. You repeat \\(iter\\) iterations. For the ultimate quality we would want \\(lr\\) to be as small as possible (to not jump too far because you want to follow the terrain), and as many \\(iter\\) as possible (to ensure that the minimum is obtained). But it's not possible to do so in practice. Selecting \\(lr\\) and \\(iter\\) has become more art than science, and is often called **hyperparameter tuning** (parameter is for functions).
 
 ```python
-{{#include ./code/x_square_sgd.py}}
+{{#include ../code/x_square_sgd.py}}
 ```
 
 ## Summary
