@@ -5,7 +5,7 @@ _**Whoever fights monsters should see to it that in the process he does not beco
 
 ## What exactly is machine learning?
 
-_"Machine learning (ML) is the study of computer algorithms that improve automatically through experience and by the use of data. It is seen as a part of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so."_ --- Widipedia
+_"Machine learning (ML) is the study of computer algorithms that improve automatically through experience and by the use of data. It is seen as a part of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so."_ --- Wikipedia
 
 Woah, woah! That's a mouthful! What is it supposed to mean?
 
@@ -28,7 +28,7 @@ An example of that would be the modern translation system. Sure, anyone knows ho
 But the benefits doesn't just stop here. The generalization of machine learning is so powerful it can aid in problems where programmers often don't even know where to start. Say, telling bananas from apples. It's a simple enough task but very difficult to be described in simple constructs (if, else, for...), so much that before machine learning this is nearly impossible to do. Again, you'll see how to solve this problem with machine learning in the book.
 
 ```python
-{{#include ./code/is_apple.py}}
+{{#include ./code/is_apple.py:4:}}
 ```
 
 As there are a lot of content to cover in the whole machine learning field, in this book we will mainly cover what's especially popular in the last couple of years, deep learning. In this book, we'll use machine learning and deep learning sort of interchangabley.

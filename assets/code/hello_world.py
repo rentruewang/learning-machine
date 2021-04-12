@@ -1,5 +1,3 @@
 def hello_world():
-    """
-    This is guarenteed to print "Hello World!"
-    """
+    "This is guaranteed to print 'Hello World!'"
     print("Hello World!")
