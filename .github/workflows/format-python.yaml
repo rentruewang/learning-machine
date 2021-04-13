@@ -1,5 +1,10 @@
 name: Code style
-on: [push]
+
+on:
+  push:
+    branches:
+      - master
+
 jobs:
   format-all:
     runs-on: ubuntu-latest
