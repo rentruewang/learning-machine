@@ -1,5 +1,10 @@
 name: English
-on: [push]
+
+on:
+  push:
+    branches:
+      - master
+
 jobs:
   build-and-deploy-en:
     runs-on: ubuntu-latest

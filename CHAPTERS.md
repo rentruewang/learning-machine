@@ -7,10 +7,13 @@
     1. Functions
     2. Objectives
     3. Optimization
-3. What can machine learning do
-    1. How does machine learning work
+3. What we want
+    1. Simplicity
+    2. Correctness
+4. Digging deeper
+    1. What is machine learning
     2. What can be approximated
-4. Desired properties
-5. Common issues in training
+    3. How close can we get?
+5. Common issues
 6. CNN
 7. Self attention

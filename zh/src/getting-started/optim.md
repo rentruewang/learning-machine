@@ -4,7 +4,7 @@ _Knowing how good something is is no good, unless we can get a good one._
 
 We have have a model. We know how good it is. Now, how do we find a good model? A naive way of trying to achieve that is to randomly choose parameters and cross our fingers and hope that the model is good enough. However, the number of possible parameters is crazily large, so it's not a feasible solution. So how are the problem solved?
 
-## Gradient Descent
+## Gradient descent
 
 Imagine you are standing on a hill. You want to find the lowest point in your region, how would you do it? You take a ball, and roll it down the hill, and naturally the ball stops at the place where the height is minimum. This is exactly what mathematicians decided to use to solve the problem. And it has a cool name. **Gradient descent**.
 
@@ -46,7 +46,7 @@ The multiplication of the gradient of \\(y\\) and a small change \\(x\\) yields 
 
 _You can think of gradient as the steepest way uphill._ If you move along the gradient, you can increase the function value the fastest, in this case, you will increase the **loss**. So usually we want to move in the opposite direction of the gradient at a point (remember we are minimizing the function?). If we always move to the opposite direction of the gradient, we will eventually get a (local) minimum value of the function, we call this **stochastic gradient descent**.
 
-### Stochastic Gradient Descent
+### Stochastic gradient descent
 
 Stochastic gradient descent is the most common gradient descent method, and the most basic one. It involves only 3 variables, \\(x, y, lr, iter\\). \\(x\\) is your input variable, \\(y\\) is your output variable, and \\(lr\\), learning rate, is a scalar showing how far you can move in one iteration. You repeat \\(iter\\) iterations. For the ultimate quality we would want \\(lr\\) to be as small as possible (to not jump too far because you want to follow the terrain), and as many \\(iter\\) as possible (to ensure that the minimum is obtained). But it's not possible to do so in practice. Selecting \\(lr\\) and \\(iter\\) has become more art than science, and is often called **hyperparameter tuning** (parameter is for functions).
 

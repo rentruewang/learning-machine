@@ -1,4 +1,3 @@
-
 # Using models to make predictions
 
 _In machine learning we want to build a model (a function) to do what we want._

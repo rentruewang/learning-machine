@@ -1,4 +1,4 @@
-# Case Study: Linear models
+# Case study: Linear models
 
 We all know linear models. (Right...? Guys?) A linear model has the form \\(y = wx + b\\), with \\(x, y, w, b \in R\\). In data science though, a more fancy way to write this equation is \\(Y = WX + B\\), with \\(X \in R^m\\) \\(Y, B \in R^n\\), \\(W \in R^{mn}\\). You will need a little bit of linear algebra to understand this. Sorry. The reason scientists like to write things in matrix and vector form is that this way they can write a lot of equations in one place. Now we ask ourselves, where are the _Holy Trinity_ we just spent a lot of time on in previous chapters?
 
