@@ -22,10 +22,11 @@ jobs:
         run: mdbook build
 
       - name: 🇺🇸 Deploy English book
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./en/book
-          destination_dir: en
-          user_name: "github-actions[bot]"
-          user_email: "github-actions[bot]@users.noreply.github.com"
+          branch: gh-pages
+          folder: ./en/book
+          target-folder: en
+          git-config-name: "github-actions[bot]"
+          git-config-email: "github-actions[bot]@users.noreply.github.com"
+          commit-message: 🎉 Book deployed

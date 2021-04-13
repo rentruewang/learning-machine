@@ -22,10 +22,11 @@ jobs:
         run: mdbook build
 
       - name: 🇹🇼 Deploy Chinese (traditional) book
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./zh/book
-          destination_dir: zh
-          user_name: "github-actions[bot]"
-          user_email: "github-actions[bot]@users.noreply.github.com"
+          branch: gh-pages
+          folder: ./zh/book
+          target-folder: zh
+          git-config-name: "github-actions[bot]"
+          git-config-email: "github-actions[bot]@users.noreply.github.com"
+          commit-message: 🎉 Book deployed

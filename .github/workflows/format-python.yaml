@@ -20,7 +20,7 @@ jobs:
           python-version: 3.8
       - name: ⬇️ Install black
         run: pip install black
-      - name: Run black
+      - name: 🏃 black
         working-directory: ./assets/code/
         run: black .
 
