@@ -1,8 +1,7 @@
 import numpy as np
-from numpy import ndarray
 
 
-def cat_dog_rabbit(image: ndarray) -> ndarray:
+def cat_dog_rabbit(image):
     """
     There are three categories. Cats. Dogs. Rabbits.
     So normally we will output an array of length 3 showing how possible the input is of each class.
