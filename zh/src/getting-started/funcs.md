@@ -5,7 +5,7 @@ _In machine learning we want to build a model (a function) to do what we want._
 You must have heard of machine learning models doing amazing things. But what exactly is a model? A model takes in some input and spit out some output. They are like functions we write in programs. You might have heard that some machine learning models know how to read a picture and translate them into words. In this case the input is the picture, and the output is the content of a picture in words we understand. Or maybe you have heard of how models can predict the stock market (while this is true, it's not that useful since the prediction may not be accurate, or else data scientists get so rich they no longer do data science), in such case the input previous days or years of share prices, the output tomorrow's share price.
 
 ```python
-{{#include ../code/ml_model.py:4:}}
+{{#include ../code/ml_finance.py:4:}}
 ```
 
 The possibilities of different uses of models is endless. But there are only _2 kinds_ of models, **classification**, and **regression**. What are those things?

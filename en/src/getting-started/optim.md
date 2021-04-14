@@ -2,7 +2,7 @@
 
 _Knowing how good something is is no good, unless we can get a good one._
 
-We have have a model. We know how good it is. Now, how do we find a good model? A naive way of trying to achieve that is to randomly choose parameters and cross our fingers and hope that the model is good enough. However, the number of possible parameters is crazily large, so it's not a feasible solution. So how are the problem solved?
+We have a model. We know how good it is. Now, how do we find a good model? A naive way of trying to achieve that is to randomly choose parameters and cross our fingers and hope that the model is good enough. However, the number of possible parameters can be crazily large, so it's not always feasible solution. What is a good way to solve the problem?
 
 ## Gradient descent
 
@@ -22,7 +22,7 @@ The input is a function \\(f\\) that we want to optimize (the ball that we want 
 Remember that we've said over and over that the function is determined by it's parameters? To optimize a function, we optimize its parameter. In this case, **the function parameters** is the position of the ball, and the **loss function output** is the value we want to minimize.
 
 ```python
-{{#include ../code/optimize_function.py:7:}}
+{{#include ../code/formal_loss.py:14:}}
 ```
 
 Now we get to the gradient part. Warning: A little math here.
@@ -38,11 +38,12 @@ Then we say that the gradient of \\(y\\):
 
 \\[\nabla y = \frac{\partial y}{\partial x} = (\frac{\partial y}{\partial x_1}, \frac{\partial y}{\partial x_2}, ..., \frac{\partial y}{\partial x_n})^T\\]
 
-Do note that little \\(T\\), transpose sign, in the upper right. The transpose is there because if we now make the dot product of \\(\nabla y\\) and  a small change in \\(x\\), denoted by \\(\Delta x\\), we observe:
+If we now make the dot product of \\(\nabla y\\) and  a small change in \\(x\\), denoted by \\(\Delta x\\), we observe:
 
-\\[(\nabla y)(x) = \frac{\partial y}{\partial x_1}\partial x_1 + \frac{\partial y}{\partial x_2}\partial x_2 + ... + \frac{\partial y}{\partial x_n}\partial x_n = \Delta y\\]
+\\[(\nabla y)^T(\Delta x) = \frac{\partial y}{\partial x_1}\partial x_1 + \frac{\partial y}{\partial x_2}\partial x_2 + ... + \frac{\partial y}{\partial x_n}\partial x_n = \sum_{i=1}^n \Delta y_i = \Delta y\\]
 
-The multiplication of the gradient of \\(y\\) and a small change \\(x\\) yields the change in \\(y\\)! This is why gradients are so useful.
+<!-- TODO: add more descriptions -->
+The multiplication of the gradient of \\(y\\) and a small change in \\(x\\) yields the change in \\(y\\)! This is why gradients are so useful.
 
 _You can think of gradient as the steepest way uphill._ If you move along the gradient, you can increase the function value the fastest, in this case, you will increase the **loss**. So usually we want to move in the opposite direction of the gradient at a point (remember we are minimizing the function?). If we always move to the opposite direction of the gradient, we will eventually get a (local) minimum value of the function, we call this **stochastic gradient descent**.
 
