@@ -38,12 +38,15 @@ Then we say that the gradient of \\(y\\):
 
 \\[\nabla y = \frac{\partial y}{\partial x} = (\frac{\partial y}{\partial x_1}, \frac{\partial y}{\partial x_2}, ..., \frac{\partial y}{\partial x_n})^T\\]
 
+And since \\(\Delta x\\) is
+
+\\[\Delta x = (\partial x_1, \partial x_2, ..., \partial x_n)^T\\]
+
 If we now make the dot product of \\(\nabla y\\) and  a small change in \\(x\\), denoted by \\(\Delta x\\), we observe:
 
 \\[(\nabla y)^T(\Delta x) = \frac{\partial y}{\partial x_1}\partial x_1 + \frac{\partial y}{\partial x_2}\partial x_2 + ... + \frac{\partial y}{\partial x_n}\partial x_n = \sum_{i=1}^n \Delta y_i = \Delta y\\]
 
-<!-- TODO: add more descriptions -->
-The multiplication of the gradient of \\(y\\) and a small change in \\(x\\) yields the change in \\(y\\)! This is why gradients are so useful.
+The multiplication of the gradient of \\(y\\) and a small change in \\(x\\) yields a small change in \\(y\\)! What this mean is that if we change \\(x\\) by a little bit \\(\Delta x\\), we can observe the change in \\(y\\) being \\(\Delta y\\). This is why gradients are so useful.
 
 _You can think of gradient as the steepest way uphill._ If you move along the gradient, you can increase the function value the fastest, in this case, you will increase the **loss**. So usually we want to move in the opposite direction of the gradient at a point (remember we are minimizing the function?). If we always move to the opposite direction of the gradient, we will eventually get a (local) minimum value of the function, we call this **stochastic gradient descent**.
 
