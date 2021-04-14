@@ -1,14 +1,9 @@
-from numpy import ndarray
-
-import mse_loss
-
-
-def loss_func(x: ndarray, y: ndarray) -> float:
+def loss_func(x, y):
     "What does the terrain look like? It looks like a bowl, the closer to the center the lower."
-    return mse_loss.mse_loss(x, y)
+    return ((x - y) ** 2).sum()
 
 
-def sgd_once(x: ndarray, y: ndarray, lr: float):
+def sgd_once(x, y, lr):
     """
     sgd stands for stochastic gradient descent.
     It moves in the direct opposite of the gradient.

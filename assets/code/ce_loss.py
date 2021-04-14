@@ -1,7 +1,6 @@
 import numpy as np
-from numpy import ndarray
 
 
-def ce_loss(x: ndarray, y: ndarray) -> float:
+def ce_loss(x, y):
     "CE: Cross entropy. You will learn about this later."
-    return -(x * np.log2(y)).sum().item()
+    return -(x * np.log2(y)).sum()

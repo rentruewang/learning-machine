@@ -1,11 +1,11 @@
-from typing import NamedTuple
+from collections import namedtuple
 
-from numpy import ndarray, random
+from numpy import random
 
 
 class Linear(object):
     "A linear model has the form F(x) = W @ X + B"
-    Grad = NamedTuple("Grad", [("w", ndarray), ("b", ndarray)])
+    Grad = namedtuple("Grad", ["w", "b"])
 
     def __init__(self, m: int, n: int):
         """
@@ -26,12 +26,12 @@ class Linear(object):
     # Continued from the previous definition
 
     @staticmethod
-    def loss_func(x: ndarray, y: ndarray) -> float:
+    def loss_func(x, y):
         "Calculate the loss between `x` and `y`"
         squared = (x - y) ** 2
-        return squared.sum().item()
+        return squared.sum()
 
-    def loss(self, real_x: ndarray, real_y: ndarray) -> float:
+    def loss(self, real_x, real_y):
         "Calculate the loss given a pair of real data"
 
         # Calling the above defined `__call__` method
@@ -43,7 +43,7 @@ class Linear(object):
 
     # Continued from the previous definition
 
-    def gradient(self, real_x: ndarray, real_y: ndarray) -> Tuple[ndarray]:
+    def gradient(self, real_x, real_y):
         "Calculate the gradient"
 
         # Calling the above defined `__call__` method
@@ -60,7 +60,7 @@ class Linear(object):
 
         return Linear.Grad(w=W_grad, b=B_grad)
 
-    def train(self, real_x: ndarray, real_y: ndarray, lr: float):
+    def train(self, real_x, real_y, lr):
         "This is what people call training a model"
         grad = self.gradient(real_x, real_y)
 

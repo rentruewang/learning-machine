@@ -1,17 +1,12 @@
-from typing import Callable
-
-from numpy import ndarray
-
-
-def distance(x: ndarray, y: ndarray) -> float:
+def distance(x, y):
     """
     This function is for calculating the distance between x and y
     In this case, it's the squared-euclidean distance
     """
-    return ((x - y) ** 2).sum().item()
+    return ((x - y) ** 2).sum()
 
 
-def loss_func(F: Callable, real_x: ndarray, real_y: ndarray) -> float:
+def loss_func(F, real_x, real_y):
     """
     loss_func calls the function for you,
     and evaluate how far in the model's output to the correct output.
@@ -26,6 +21,6 @@ def loss_func(F: Callable, real_x: ndarray, real_y: ndarray) -> float:
     return loss
 
 
-def optimize_function(F: Callable):
+def optimize_function(F):
     "We are doing something to `F`'s parameter and hope that the function gets better"
     F.parameter = 0

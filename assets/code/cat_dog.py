@@ -1,7 +1,4 @@
-from numpy import ndarray
-
-
-def cat_or_dog(image: ndarray) -> float:
+def cat_or_dog(image):
     """
     Do something smart to the image.
     Returns a numbers to tell your confidence in the image being a cat instead of a dog.
@@ -10,4 +7,4 @@ def cat_or_dog(image: ndarray) -> float:
     """
     result = image.sum() / image.size
     assert 0.0 <= result <= 1.0
-    return result.item()
+    return result
