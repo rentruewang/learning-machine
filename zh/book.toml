@@ -1,15 +1,15 @@
 [book]
 authors = ["r3ntru3w4n9"]
-language = "en"
+language = "zh"
 multilingual = true
 src = "src"
-title = "Learning Machine"
-description = "To do machine learning, one must learn machine."
+title = "學習機器"
+description = "要做機器學習，必先學習機器"
 
 [output.html]
 mathjax-support = true
-site-url = "/learning-machine/en/"
-git-repository-url = "https://github.com/r3ntru3w4n9/learning-machine/zh"
+site-url = "/learning-machine/zh/"
+git-repository-url = "https://github.com/r3ntru3w4n9/learning-machine/tree/master/zh"
 git-repository-icon = "fa-github"
 
 [output.html.playground]

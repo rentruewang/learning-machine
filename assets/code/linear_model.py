@@ -1,19 +1,20 @@
 from typing import NamedTuple
 
-import numpy as np
 from numpy import ndarray, random
-
-WBGrad = NamedTuple("WBGrad", [("w", ndarray), ("b", ndarray)])
 
 
 class Linear(object):
+    "A linear model has the form F(x) = W @ X + B"
+    Grad = NamedTuple("Grad", [("w", ndarray), ("b", ndarray)])
+
     def __init__(self, m: int, n: int):
         """
-        Y = F(X) + B,
+        Y = F(X) + B = W @ X + B,
         Y, B: R^n
         F:    R^m -> R^n
+        W:    R^mn
         X:    R^m
-        Random initialization
+        W and B are randomly initialized
         """
         self.W = random.randn(m, n)
         self.B = random.randn(n)
@@ -37,7 +38,7 @@ class Linear(object):
         pred_y = self(real_x)
 
         # See how far the predict value is from the real value
-        # That is how good your model is
+        # That is how we evaluate how good your model is
         return self.loss_func(pred_y, real_y)
 
     # Continued from the previous definition
@@ -57,7 +58,7 @@ class Linear(object):
         # partial L / partial B_i = diff_i
         B_grad = diff
 
-        return WBGrad(w=W_grad, b=B_grad)
+        return Linear.Grad(w=W_grad, b=B_grad)
 
     def train(self, real_x: ndarray, real_y: ndarray, lr: float):
         "This is what people call training a model"

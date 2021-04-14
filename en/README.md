@@ -10,7 +10,7 @@ _**Whoever fights monsters should see to it that in the process he does not beco
 ## [English version](./README.md)
 ## [中文版](../zh/README.md)
 
-In this handbook, I'll cover the basics of machine learning, as well as some thories as for why certain methods work.
+In this handbook, we will look into the basics of machine learning, as well as some theories as for why certain methods work.
 
 ### Disclaimer
 

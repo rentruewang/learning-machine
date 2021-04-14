@@ -16,19 +16,21 @@ In machine learning, there are a lot of tasks tackling real world problems. Such
 
 The smaller the loss, the better the function is. Usually the loss is a positive number, but occasionally we see negative losses permitted in a problem. As long a smaller loss indicates a better function. To calculate loss, we define a **loss function**. _The loss function is defined to operate on the function itself (it's a function of function) and output how good the model is. Realistically though, the loss function operates on the output of the function and determines how good that output is._ To further clarify what I mean
 
-### Formally defined loss function:
-
-```python
-{{#include ../code/formal_loss.py:7:}}
-```
-
 ### Loosely defined loss function (the one used in PyTorch, TensorFlow, etc):
 
 ```python
-{{#include ../code/practice_loss.py:4:}}
+{{#include ../code/formal_loss.py:6:11}}
 ```
 
-In practice you often see the loosely defined loss function instead of the formally defined loss function. It's more flexible, after all, and is better suited to be provided as a library function. However, it's more desirable to use the formally defined loss function because it isn't the output of another function, and that makes our analysis easier.
+### Formally defined loss function:
+
+```python
+{{#include ../code/formal_loss.py:14:26}}
+```
+
+We will talk about how to optimize the function in the next chapter.
+
+In practice you often see the loosely defined loss function instead of the formally defined loss function. After all it's more flexible, and is better suited to be provided as a library function. However, since models and losses are discussed all together in the optimization phase, we will use the formally defined loss function in this book.
 
 ## Several commonly used loss functions:
 
