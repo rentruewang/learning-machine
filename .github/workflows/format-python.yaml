@@ -30,6 +30,6 @@ jobs:
         with:
           author_name: "github-actions[bot]"
           author_email: "github-actions[bot]@users.noreply.github.com"
-          message: "🤖 R3nTru3W4n9 thinks you forgot to format your code!"
+          message: "🤖 RenTrueWang thinks you forgot to format your code!"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
