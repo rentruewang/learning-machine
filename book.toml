@@ -9,7 +9,7 @@ description = "To do machine learning, one must learn machine."
 [output.html]
 mathjax-support = true
 site-url = "/learning-machine/en/"
-git-repository-url = "https://github.com/rentruewang/learning-machine/tree/master"
+git-repository-url = "https://github.com/rentruewang/learning-machine"
 git-repository-icon = "fa-github"
 
 [output.html.playground]

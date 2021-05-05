@@ -1,9 +1,9 @@
-name: English
+name: PDF
 
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build-and-deploy-en:
@@ -18,14 +18,13 @@ jobs:
           mdbook-version: "latest"
 
       - name: 🇺🇸 Build English version of the book
-        working-directory: en
         run: mdbook build
 
       - name: 🇺🇸 Deploy English book
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           branch: gh-pages
-          folder: ./en/book
+          folder: ./book
           target-folder: en
           git-config-name: "github-actions[bot]"
           git-config-email: "github-actions[bot]@users.noreply.github.com"
