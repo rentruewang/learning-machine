@@ -1,4 +1,4 @@
-name: PDF
+name: PDF Build
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build-and-deploy-en:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: 🔔 Checkout
@@ -25,7 +25,6 @@ jobs:
         with:
           branch: gh-pages
           folder: ./book
-          target-folder: en
           git-config-name: "github-actions[bot]"
           git-config-email: "github-actions[bot]@users.noreply.github.com"
           commit-message: 🎉 Book deployed
