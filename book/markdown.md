@@ -30,11 +30,6 @@ My directive content
 ```
 ````
 
-```python
-def code_snippet():
-    print("this is some code")
-```
-
 This will only work if a directive with name `mydirectivename` already exists
 (which it doesn't). There are many pre-defined directives associated with
 Jupyter Book. For example, to insert a note box into your content, you can
