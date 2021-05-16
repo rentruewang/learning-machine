@@ -3,6 +3,7 @@
 #
 - file: intro
 - file: content
-  sections:
+  chapters:
     - file: markdown
-    - file: notebooks
+      sections:
+      - file: notebooks

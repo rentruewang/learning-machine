@@ -12,16 +12,19 @@ jobs:
       - name: 🔔 Checkout
         uses: actions/checkout@v2
 
-      - name: 🏗️ python 3.8
+      - name: 🏗️ python 3.9
         uses: actions/setup-python@v2
         with:
-          python-version: 3.8
+          python-version: 3.9
+
+      - name: ⬇️ Sphinx
+        run: pip install sphinx
 
       - name: ⬇️ Jupyter book
         run: pip install jupyter-book
 
       - name: 🇺🇸 Build English version of the book
-        run: jupyter-book build ./book
+        run: jupyter-book build book
 
       - name: 🇺🇸 Deploy English book
         uses: JamesIves/github-pages-deploy-action@4.1.1
