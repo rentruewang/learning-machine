@@ -19,6 +19,6 @@ This book assumes that you have at least some basic understanding of programming
 
 We take openness and inclusiveness very seriously. We have adopted the following code of conduct.
 
-[Contributor Code of conduct](CONTRIBUTING.md)
+[Contributor Code of conduct](CODE_OF_CONDUCT.md)
 
 ## Index

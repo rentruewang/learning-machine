@@ -17,9 +17,6 @@ jobs:
         with:
           python-version: 3.9
 
-      - name: ⬇️ Sphinx
-        run: pip install sphinx
-
       - name: ⬇️ Jupyter book
         run: pip install jupyter-book
 

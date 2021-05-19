@@ -1,9 +1,6 @@
-# Table of content
-# Learn more at https://jupyterbook.org/customize/toc.html
-#
 - file: intro
-- file: content
-  chapters:
-    - file: markdown
-      sections:
-      - file: notebooks
+
+- file: basic/basic
+  sections:
+    - file: basic/differentiable
+    - file: basic/gradients
