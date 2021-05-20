@@ -3,7 +3,10 @@
 
 title: Learning Machine
 author: RenChu Wang
+copyright: "RenChu Wang, 2021"
 logo: logo.png
+exclude_patterns: [_build]
+only_build_toc_files: true
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -28,5 +31,8 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
+  home_page_in_navbar: false
+  use_edit_page_button: true
   use_issues_button: true
   use_repository_button: true
+  baseurl: https://rentruewang.github.io/

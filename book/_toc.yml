@@ -1,6 +1,44 @@
 - file: intro
 
-- file: basic/basic
-  sections:
+- part: Getting started
+  chapters:
+    - file: basic/basic
     - file: basic/differentiable
     - file: basic/gradients
+
+- part: Common Tasks
+  chapters:
+    - file: tasks/tasks
+    - file: tasks/regression/regression
+      sections:
+        - file: tasks/regression/em-algo
+    - file: tasks/classification/classification
+      sections:
+        - file: tasks/classification/gmm
+
+- part: Common Building Blocks
+  chapters:
+    - file: layers/layers
+    - file: layers/linear/linear
+    - file: layers/cnn/cnn
+    - file: layers/rnn/rnn
+    - file: layers/dropout/dropout
+    - file: layers/norm/norm
+    - file: layers/padding/padding
+    - file: layers/pooling/pooling
+    - file: layers/transformer/transformer
+      sections:
+        - file: layers/transformer/attn/attn
+
+- part: Generative Models
+  chapters:
+    - file: generative/ae/ae
+      sections:
+        - file: generative/ae/vae/vae
+    - file: generative/gan/gan
+
+# - part: Clustering
+# TODO: chapters
+
+# - part: Reinforcement Learning
+# TODO: chapters
