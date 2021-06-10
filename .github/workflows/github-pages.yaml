@@ -17,8 +17,13 @@ jobs:
         with:
           python-version: 3.9
 
-      - name: ⬇️ Jupyter book
-        run: pip install jupyter-book
+      - name: ⬇️ Dependencies
+        uses: py-actions/py-dependency-install@v2
+        with:
+          path: requirements.txt
+          update-pip: true
+          update-setuptools: true
+          update-wheel: true
 
       - name: 🇺🇸 Build English version of the book
         run: jupyter-book build book
