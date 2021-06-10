@@ -2,6 +2,7 @@ black
 jupyter
 jupyter-book
 ipykernel
+ipython
 matplotlib
 numpy
 torch
