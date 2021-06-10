@@ -1,3 +1,7 @@
+black
+jupyter
 jupyter-book
+ipykernel
 matplotlib
 numpy
+torch
