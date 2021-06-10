@@ -1,51 +1,44 @@
-- file: intro
-
-- part: Getting started
+format: jb-book
+root: intro
+parts:
+- caption: Getting started
   chapters:
-    - file: basic/basic
-    - file: basic/approx/approx
-    - file: basic/gradients/gradients
-      sections:
-        - file: basic/gradients/loss-fn-derivative
-        - file: basic/gradients/torch-cal-grads
-
-- part: Common Tasks
+  - file: basic/basic
+  - file: basic/approx/approx
+  - file: basic/gradients/gradients
+    sections:
+    - file: basic/gradients/loss-fn-derivative
+    - file: basic/gradients/torch-cal-grads
+- caption: Common Tasks
   chapters:
-    - file: tasks/tasks
-    - file: tasks/regression/regression
-      sections:
-        - file: tasks/regression/em-algo
-    - file: tasks/classification/classification
-      sections:
-        - file: tasks/classification/gmm
-
-- part: Common Building Blocks
+  - file: tasks/tasks
+  - file: tasks/regression/regression
+    sections:
+    - file: tasks/regression/em-algo
+  - file: tasks/classification/classification
+    sections:
+    - file: tasks/classification/gmm
+- caption: Common Building Blocks
   chapters:
-    - file: layers/layers
-    - file: layers/linear/linear
-      sections:
-        - file: layers/linear/linear-grad
-    - file: layers/cnn/cnn
-    - file: layers/rnn/rnn
-    - file: layers/emb/emb
-    - file: layers/dropout/dropout
-    - file: layers/norm/norm
-    - file: layers/padding/padding
-    - file: layers/pooling/pooling
-    - file: layers/transformer/transformer
-      sections:
-        - file: layers/transformer/attn/attn
-        - file: layers/transformer/transformer-vs-rnn
-
-- part: Generative Models
+  - file: layers/layers
+  - file: layers/linear/linear
+    sections:
+    - file: layers/linear/linear-grad
+  - file: layers/cnn/cnn
+  - file: layers/rnn/rnn
+  - file: layers/emb/emb
+  - file: layers/dropout/dropout
+  - file: layers/norm/norm
+  - file: layers/padding/padding
+  - file: layers/pooling/pooling
+  - file: layers/transformer/transformer
+    sections:
+    - file: layers/transformer/attn/attn
+    - file: layers/transformer/transformer-vs-rnn
+- caption: Generative Models
   chapters:
-    - file: generative/generative
-    - file: generative/ae/ae
-      sections:
-        - file: generative/ae/vae/vae
-    - file: generative/gan/gan
-# - part: Clustering
-# TODO: chapters
-
-# - part: Reinforcement Learning
-# TODO: chapters
+  - file: generative/generative
+  - file: generative/ae/ae
+    sections:
+    - file: generative/ae/vae/vae
+  - file: generative/gan/gan
