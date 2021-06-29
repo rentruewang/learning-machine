@@ -1,6 +1,6 @@
 # learning-machine
 
-**[Machine learning based on answers and intuition for machine learners](https://rentruewang.github.io/learning-machine)**
+**[Straitforward machine learning based on answers and intuition for machine learners](https://rentruewang.github.io/learning-machine)**
 
 [![Website](https://github.com/rentruewang/learning-machine/actions/workflows/github-pages.yaml/badge.svg)](https://github.com/rentruewang/learning-machine/actions/workflows/github-pages.yaml)
 
@@ -9,11 +9,19 @@ _**Whoever fights monsters should see to it that in the process he does not beco
 
 ## Why this book?
 
-<!-- There are many resources for machine learning on the internet. However, most  TODO: -->
+There are many resources for machine learning on the internet. However, most of them are either
+
+1. Too long. It takes half an hour just to read through.
+
+2. Too math heavy. It takes you forever to understand.
+
+3. Too confusing. The concepts are not strait-forward.
+
+This book aims to solve all of that. It tries to be as concise but easy to grasp as possible.
 
 ## Who is this book for?
 
-<!-- TODO: -->
+This book is for learners who want to quickly grasp an idea, without really dive into a topic (it takes way too long!). The book is a handbook for people who want to preserve their time.
 
 ### Disclaimer
 
