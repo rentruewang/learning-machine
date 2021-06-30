@@ -1,4 +1,4 @@
-name: Website Build
+name: Notebook checks
 
 on:
   push:
@@ -41,6 +41,6 @@ jobs:
         with:
           author_name: "github-actions[bot]"
           author_email: "github-actions[bot]@users.noreply.github.com"
-          message: 🤖 RenTrueWang thinks you forgot to clean up your notebook!
+          message: 🤖 RenTrueWang has help you cleaned up the notebook!
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

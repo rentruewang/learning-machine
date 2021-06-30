@@ -140,5 +140,8 @@ cython_debug/
 # Jupyter Book
 _build/
 
+# MacOs
+.DS_Store
+
 # VsCode
 .vscode/

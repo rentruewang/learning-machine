@@ -4,6 +4,10 @@ parts:
   - caption: Getting started
     chapters:
       - file: basics/basics
+        sections:
+        - file: basics/data/data
+        - file: basics/model/model
+        - file: basics/loss/loss
       - file: basics/approx/approx
       - file: basics/gradients/gradients
         sections:
@@ -32,6 +36,9 @@ parts:
           - file: layers/transformer/attn/attn
           - file: layers/transformer/attn/self-attn
           - file: layers/transformer/transformer-vs-rnn
+          - file: layers/transformer/training/training
+          - file: layers/transformer/training/teacher/teacher
+          - file: layers/transformer/training/token/token
       - file: layers/activation/activation
         sections:
           - file: layers/activation/relu/relu
