@@ -30,8 +30,14 @@ parts:
       - file: layers/transformer/transformer
         sections:
           - file: layers/transformer/attn/attn
+          - file: layers/transformer/attn/self-attn
           - file: layers/transformer/transformer-vs-rnn
       - file: layers/activation/activation
+        sections:
+          - file: layers/activation/relu/relu
+          - file: layers/activation/sigmoid/sigmoid
+          - file: layers/activation/softmax/softmax
+          - file: layers/activation/tanh/tanh
   - caption: Frequently encountered issues
     chapters:
       - file: issues/issues
@@ -54,3 +60,15 @@ parts:
       - file: better/meta/meta
       - file: better/lll/lll
       - file: better/compression/compression
+  - caption: Using existing models to improve models
+    chapters:
+      - file: reuse/reuse
+      - file: reuse/da/da
+      - file: reuse/transfer/transfer
+      - file: reuse/distil/distil
+  - caption: Unsupervised training
+    chapters:
+      - file: unsupervised/unsupervised
+      - file: unsupervised/decisiontree/decisiontree
+      - file: unsupervised/clustering/clustering
+      - file: unsupervised/selfsupervised/selfsupervised

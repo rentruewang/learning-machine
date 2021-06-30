@@ -1,0 +1,46 @@
+name: Website Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🔔 Checkout
+        uses: actions/checkout@v2
+
+      - name: 🏗️ python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: ⬇️ Dependencies
+        uses: py-actions/py-dependency-install@v2
+        with:
+          path: requirements.txt
+          update-pip: true
+          update-setuptools: true
+          update-wheel: true
+
+      - name: 🏗️ Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+
+      - name: ⬇️ fd-find
+        run: cargo install fd-find
+
+      - name: 🧹 Clear output of jupyter notebooks
+        run: fd -e ipynb | xargs -I{} -P0 jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace {}
+
+      - name: ⬆️ Add and Commit
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: "github-actions[bot]"
+          author_email: "github-actions[bot]@users.noreply.github.com"
+          message: 🤖 RenTrueWang thinks you forgot to clean up your notebook!
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
