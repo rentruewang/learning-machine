@@ -39,6 +39,7 @@ parts:
           - file: layers/transformer/training/training
           - file: layers/transformer/training/teacher/teacher
           - file: layers/transformer/training/token/token
+          - file: layers/transformer/training/no-training/no-training
       - file: layers/activation/activation
         sections:
           - file: layers/activation/relu/relu
@@ -57,6 +58,8 @@ parts:
       - file: generative/generative
       - file: generative/ae/ae
         sections:
+          - file: generative/ae/ae-arch
+          - file: generative/ae/ae-semi
           - file: generative/ae/vae/vae
       - file: generative/gan/gan
       - file: generative/gmm/gmm
@@ -73,9 +76,10 @@ parts:
       - file: reuse/da/da
       - file: reuse/transfer/transfer
       - file: reuse/distil/distil
-  - caption: Unsupervised training
+  - caption: Beyond supervised training
     chapters:
-      - file: unsupervised/unsupervised
-      - file: unsupervised/decisiontree/decisiontree
-      - file: unsupervised/clustering/clustering
-      - file: unsupervised/selfsupervised/selfsupervised
+      - file: not-supervised/semi-supervised/semi-supervised
+      - file: not-supervised/unsupervised
+      - file: not-supervised/decision-tree/decision-tree
+      - file: not-supervised/clustering/clustering
+      - file: not-supervised/self-supervised/self-supervised
