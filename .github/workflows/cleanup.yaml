@@ -17,13 +17,20 @@ jobs:
         with:
           python-version: 3.9
 
-      - name: ⬇️ Dependencies
+      - name: ⬇️ Python Dependencies
         uses: py-actions/py-dependency-install@v2
         with:
           path: requirements.txt
           update-pip: true
           update-setuptools: true
           update-wheel: true
+
+      - name: ⬇️ prettier
+        working-directory: ./javascript
+        run: npm install prettier --save-dev
+      - name: 🏃 prettier
+        working-directory: ./javascript
+        run: ./node_modules/prettier/bin-prettier.js --write .
 
       - name: 🏗️ Rust toolchain
         uses: actions-rs/toolchain@v1
@@ -35,6 +42,9 @@ jobs:
 
       - name: 🧹 Clear output of jupyter notebooks
         run: fd -e ipynb | xargs -I{} -P0 jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace {}
+
+      - name: 🧹 Format all markdown files
+        run: fd -e md | xargs -I{} -P0 prettier --write {}
 
       - name: ⬆️ Add and Commit
         uses: EndBug/add-and-commit@v7

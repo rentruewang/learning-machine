@@ -3,9 +3,9 @@
 **[Strait forward machine learning based on answers and intuition for machine learners](https://rentruewang.github.io/learning-machine)**
 
 [![Website](https://github.com/rentruewang/learning-machine/actions/workflows/github-pages.yaml/badge.svg)](https://github.com/rentruewang/learning-machine/actions/workflows/github-pages.yaml)
-[![Notebook](https://github.com/rentruewang/learning-machine/actions/workflows/notebook.yaml/badge.svg)](https://github.com/rentruewang/learning-machine/actions/workflows/notebook.yaml)
+[![Cleanup](https://github.com/rentruewang/learning-machine/actions/workflows/cleanup.yaml/badge.svg)](https://github.com/rentruewang/learning-machine/actions/workflows/cleanup.yaml)
 
-**This handbook accompanies the course: [Machine Learning with Hung-Yi Lee](https://speech.ee.ntu.edu.tw/~tlkagk/)**
+**This handbook accompanies the course: [Machine Learning with Hung-Yi Lee](https://speech.ee.ntu.edu.tw/~hylee/ml/2021-spring.html)**
 
 _**Whoever fights monsters should see to it that in the process he does not become a monster. And if you gaze long enough into an abyss, the abyss will gaze back into you. And in order to tame machine learning, one mush first know how to learn machine.**_
 --- Me, 2021
@@ -24,7 +24,7 @@ This book aims to solve all of that. It tries to be as concise but easy to grasp
 
 ## Who is this book for?
 
-This book is for learners who want to quickly grasp an idea, without really dive into a topic (it takes way too long!). The book is a handbook for people who want to preserve their time.
+This book is for learners who want to quickly grasp an idea, without diving deep into a topic (it takes way too long!). The book is a handbook for people who want to preserve their time.
 
 ### Disclaimer
 
