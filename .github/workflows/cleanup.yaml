@@ -1,4 +1,4 @@
-name: Notebook checks
+name: Clean up
 
 on:
   push:
@@ -25,11 +25,14 @@ jobs:
           update-setuptools: true
           update-wheel: true
 
+      - name: 🏗️ node
+        uses: actions/setup-node@v2
+        with:
+          node-verion: 14
+
       - name: ⬇️ prettier
-        working-directory: ./javascript
         run: npm install prettier --save-dev
       - name: 🏃 prettier
-        working-directory: ./javascript
         run: ./node_modules/prettier/bin-prettier.js --write .
 
       - name: 🏗️ Rust toolchain
