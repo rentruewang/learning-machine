@@ -31,9 +31,7 @@ jobs:
           node-verion: 14
 
       - name: ⬇️ prettier
-        run: npm install prettier --save-dev
-      - name: 🏃 prettier
-        run: ./node_modules/prettier/bin-prettier.js --write .
+        run: npm install -g prettier 
 
       - name: 🏗️ Rust toolchain
         uses: actions-rs/toolchain@v1
@@ -47,7 +45,7 @@ jobs:
         run: fd -e ipynb | xargs -I{} -P0 jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace {}
 
       - name: 🧹 Format all markdown files
-        run: fd -e md | xargs -I{} -P0 prettier --write {}
+        run: fd -e md | xargs -I{} -P0 $(npm root -g)/prettier --write {}
 
       - name: ⬆️ Add and Commit
         uses: EndBug/add-and-commit@v7
