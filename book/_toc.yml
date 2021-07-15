@@ -53,6 +53,8 @@ parts:
       - file: issues/gradient/norm
       - file: issues/gradient/saddle
       - file: issues/lr/lr
+      - file: issues/data/overfit
+      - file: issues/data/underfit
   - caption: Generative Models
     chapters:
       - file: generative/generative
