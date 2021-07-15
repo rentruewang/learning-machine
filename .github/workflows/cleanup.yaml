@@ -25,14 +25,6 @@ jobs:
           update-setuptools: true
           update-wheel: true
 
-      - name: 🏗️ node
-        uses: actions/setup-node@v2
-        with:
-          node-verion: 14
-
-      - name: ⬇️ prettier
-        run: npm install -g prettier 
-
       - name: 🏗️ Rust toolchain
         uses: actions-rs/toolchain@v1
         with:
@@ -45,7 +37,9 @@ jobs:
         run: fd -e ipynb | xargs -I{} -P0 jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace {}
 
       - name: 🧹 Format all markdown files
-        run: fd -e md | xargs -I{} -P0 $(npm root -g)/prettier --write {}
+        uses: actionsx/prettier@v2
+        with:
+          args: --write $(fd -e md -e yaml -e toml)
 
       - name: ⬆️ Add and Commit
         uses: EndBug/add-and-commit@v7
