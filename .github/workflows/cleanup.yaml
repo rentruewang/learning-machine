@@ -39,7 +39,7 @@ jobs:
       - name: 🧹 Format all markdown files
         uses: actionsx/prettier@v2
         with:
-          args: --write $(fd -e md -e yaml -e toml)
+          args: --write .
 
       - name: ⬆️ Add and Commit
         uses: EndBug/add-and-commit@v7
