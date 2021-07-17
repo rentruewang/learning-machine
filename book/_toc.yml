@@ -12,7 +12,7 @@ parts:
       - file: basics/gradients/gradients
         sections:
           - file: basics/gradients/loss-fn-derivative
-          - file: basics/gradients/torch-cal-grads
+          - file: basics/gradients/back-prop
   - caption: Common Tasks
     chapters:
       - file: tasks/tasks
