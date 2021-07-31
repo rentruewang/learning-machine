@@ -14,7 +14,7 @@ _**Whoever fights monsters should see to it that in the process he does not beco
 
 ## Where does the logo come from?
 
-The shape of the brain from a meme template.
+The logo is made with Inkscape and the following meme.
 ![Comic](./book/comic.png)
 
 ## Why this book?
