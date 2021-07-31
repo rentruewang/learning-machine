@@ -1,7 +1,7 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Getting started
+  - caption: Getting Started
     chapters:
       - file: basics/basics
         sections:
@@ -17,6 +17,8 @@ parts:
     chapters:
       - file: tasks/tasks
       - file: tasks/regression/regression
+        sections:
+          - file: tasks/regression/auto/auto
       - file: tasks/classification/classification
   - caption: Common Building Blocks
     chapters:
@@ -26,6 +28,9 @@ parts:
           - file: layers/linear/linear-grad
       - file: layers/cnn/cnn
       - file: layers/rnn/rnn
+        sections:
+          - file: layers/rnn/lstm/lstm
+          - file: layers/rnn/gru/gru
       - file: layers/emb/emb
       - file: layers/dropout/dropout
       - file: layers/norm/norm
@@ -46,7 +51,7 @@ parts:
           - file: layers/activation/sigmoid/sigmoid
           - file: layers/activation/softmax/softmax
           - file: layers/activation/tanh/tanh
-  - caption: Frequently encountered issues
+  - caption: Frequently Encountered Issues
     chapters:
       - file: issues/issues
       - file: issues/batch/batch
@@ -65,23 +70,31 @@ parts:
           - file: generative/ae/vae/vae
       - file: generative/gan/gan
       - file: generative/gmm/gmm
-  - caption: Improvements to a model
+  - caption: Improving Models
     chapters:
       - file: better/better
       - file: better/explainable/explainable
       - file: better/meta/meta
       - file: better/lll/lll
       - file: better/compression/compression
-  - caption: Using existing models to improve models
+  - caption: Reuse Existing Models
     chapters:
       - file: reuse/reuse
       - file: reuse/da/da
       - file: reuse/transfer/transfer
       - file: reuse/distil/distil
-  - caption: Beyond supervised training
+  - caption: Beyond Supervised Training
     chapters:
-      - file: not-supervised/semi-supervised/semi-supervised
-      - file: not-supervised/unsupervised
-      - file: not-supervised/decision-tree/decision-tree
-      - file: not-supervised/clustering/clustering
-      - file: not-supervised/self-supervised/self-supervised
+      - file: unsupervised/unsupervised
+      - file: unsupervised/clustering/clustering
+      - file: unsupervised/decision-tree/decision-tree
+      - file: unsupervised/self-supervised/self-supervised
+      - file: unsupervised/semi-supervised/semi-supervised
+  - caption: Reinforcement Learning
+    chapters:
+      - file: reinforce/reinforce
+        sections:
+          - file: reinforce/essential/state
+          - file: reinforce/essential/agent
+          - file: reinforce/essential/action
+          - file: reinforce/essential/reward
