@@ -90,11 +90,6 @@ parts:
       - file: unsupervised/decision-tree/decision-tree
       - file: unsupervised/self-supervised/self-supervised
       - file: unsupervised/semi-supervised/semi-supervised
-      - file: unsupervised/semi-supervised/semi-supervised
-      - file: unsupervised/unsupervised
-      - file: unsupervised/decision-tree/decision-tree
-      - file: unsupervised/clustering/clustering
-      - file: unsupervised/self-supervised/self-supervised
   - caption: Reinforcement Learning
     chapters:
       - file: reinforce/reinforce
