@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  clean-up:
     runs-on: ubuntu-latest
     steps:
       - name: 🔔 Checkout
