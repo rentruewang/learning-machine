@@ -4,7 +4,7 @@
 title: Learning Machine
 author: RenChu Wang
 copyright: "RenChu Wang, 2021"
-logo: logo.png
+logo: images/logo.png
 exclude_patterns: [_build]
 only_build_toc_files: true
 
@@ -31,6 +31,7 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
+  favicon: images/favicon.ico
   home_page_in_navbar: true
   use_edit_page_button: true
   use_issues_button: true

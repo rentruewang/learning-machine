@@ -7,7 +7,7 @@
 
 **This handbook accompanies the course: [Machine Learning with Hung-Yi Lee](https://speech.ee.ntu.edu.tw/~hylee/ml/2021-spring.html)**
 
-![Logo](./book/logo.png)
+![Logo](./book/images/logo.png)
 
 _**Whoever fights monsters should see to it that in the process he does not become a monster. And if you gaze long enough into an abyss, the abyss will gaze back into you. And in order to tame machine learning, one mush first know how to learn machine.**_
 --- Me, 2021
@@ -15,7 +15,7 @@ _**Whoever fights monsters should see to it that in the process he does not beco
 ## Where does the logo come from?
 
 The logo is made with Inkscape and the following meme.
-![Comic](./book/comic.png)
+![Comic](./book/images/comic.png)
 
 ## Why this book?
 
