@@ -33,6 +33,8 @@ This book aims to solve all of that. It tries to be as concise but easy to grasp
 
 This book is for learners who want to quickly grasp an idea, without diving deep into a topic (it takes way too long!). The book is a handbook for people who want to preserve their time.
 
+If you find this book helpful, please consider starring (★) this repository!
+
 ## Disclaimer
 
 This book assumes that you have at least some basic understanding of programming.
@@ -67,7 +69,7 @@ This book assumes that you have at least some basic understanding of programming
     - [Attention](./book/layers/transformer/attn/attn.ipynb)
     - [Self Attention](./book/layers/transformer/attn/self-attn.ipynb)
     - [Versus RNN](./book/layers/transformer/transformer-vs-rnn.ipynb)
-    - [Training](./book/training/../layers/transformer/training/training.ipynb)
+    - [Training](./book/layers/transformer/training/training.ipynb)
     - [Teacher Forcing](./book/layers/transformer/training/teacher/teacher.ipynb)
     - [Tokenization](./book/layers/transformer/training/token/token.ipynb)
     - [Without Training](./book/layers/transformer/training/no-training/no-training.ipynb)
