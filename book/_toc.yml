@@ -83,8 +83,10 @@ parts:
   - caption: Reuse Existing Models
     chapters:
       - file: reuse/reuse
-      - file: reuse/da/da
       - file: reuse/transfer/transfer
+      - file: reuse/da/da
+        sections:
+          - file: reuse/da/transfer-vs-da
       - file: reuse/distil/distil
   - caption: Beyond Supervised Training
     chapters:
