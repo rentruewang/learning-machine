@@ -103,3 +103,10 @@ parts:
           - file: reinforce/essential/agent
           - file: reinforce/essential/action
           - file: reinforce/essential/reward
+      - file: reinforce/value/value
+        sections:
+          - file: reinforce/value/q-learning
+      - file: reinforce/policy/policy
+        sections:
+          - file: reinforce/policy/policy-gradient
+      - file: reinforce/ac/ac
