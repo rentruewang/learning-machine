@@ -45,7 +45,6 @@ We take openness and inclusiveness very seriously. We have adopted the following
 
 [Contributor code of conduct](CODE_OF_CONDUCT.md)
 
-
 ## 🔖 Index
 
 - ### [Getting Started](./book/basics/basics.ipynb)
