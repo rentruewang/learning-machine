@@ -25,7 +25,7 @@ There are many resources for machine learning on the internet. However, most of 
 
 📐 Too math heavy. It takes you forever to understand.
 
-🤪 Too confusing. The concepts are not strait-forward.
+🤪 Too confusing. The concepts are not straight-forward.
 
 This book aims to solve all of that. It tries to be as concise but easy to grasp as possible.
 
