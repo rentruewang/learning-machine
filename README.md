@@ -1,6 +1,6 @@
 # ![Favicon](./book/images/favicon.ico) Learning Machine
 
-**[Strait forward machine learning based on answers and intuition for machine learners](https://rentruewang.github.io/learning-machine)**
+**[Straight forward machine learning based on answers and intuition for machine learners](https://rentruewang.github.io/learning-machine)**
 
 [![Website](https://github.com/rentruewang/learning-machine/actions/workflows/github-pages.yaml/badge.svg)](https://github.com/rentruewang/learning-machine/actions/workflows/github-pages.yaml)
 [![Cleanup](https://github.com/rentruewang/learning-machine/actions/workflows/cleanup.yaml/badge.svg)](https://github.com/rentruewang/learning-machine/actions/workflows/cleanup.yaml)
