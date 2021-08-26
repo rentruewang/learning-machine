@@ -9,7 +9,7 @@
 
 ![Logo](./book/images/logo.png)
 
-🤓 _**Whoever fights monsters should see to it that in the process he does not become a monster. And if you gaze long enough into an abyss, the abyss will gaze back into you. And in order to tame machine learning, one mush first know how to learn machine.**_
+🤓 _**Whoever fights monsters should see to it that in the process he does not become a monster. And if you gaze long enough into an abyss, the abyss will gaze back into you. And in order to tame machine learning, one must first know how to learn machine.**_
 --- Me, 2021
 
 ## ✍️ Where does the logo come from?
@@ -108,7 +108,7 @@ We take openness and inclusiveness very seriously. We have adopted the following
 - ### [Reuse Existing Models](./book/reuse/reuse.ipynb)
   - [Transfer Learning](./book/reuse/transfer/transfer.ipynb)
   - [Domain Adaptation](./book/reuse/da/da.ipynb)
-    - [Transfer Learning vs Domain Adaptation](./book/reuse/da/transfer-vs-da.ipynb)
+    - [Vs Transfer Learning](./book/reuse/da/transfer-vs-da.ipynb)
   - [Knowledge Distillation](book/reuse/distil/distil.ipynb)
 - ### [Beyond Supervised Training](./book/unsupervised/unsupervised.ipynb)
   - [Clustering](./book/unsupervised/clustering/clustering.ipynb)
