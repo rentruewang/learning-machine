@@ -83,10 +83,9 @@ parts:
   - caption: Reuse Existing Models
     chapters:
       - file: reuse/reuse
-      - file: reuse/transfer/transfer
-      - file: reuse/da/da
+      - file: reuse/transfer/tl-da
         sections:
-          - file: reuse/da/transfer-vs-da
+          - file: reuse/transfer/tl-vs-da
       - file: reuse/distil/distil
   - caption: Beyond Supervised Training
     chapters:
@@ -103,6 +102,7 @@ parts:
           - file: reinforce/essential/agent
           - file: reinforce/essential/action
           - file: reinforce/essential/reward
+          - file: reinforce/essential/online-offline
       - file: reinforce/value/value
         sections:
           - file: reinforce/value/q-learning
