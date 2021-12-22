@@ -1,8 +1,7 @@
 # ![Favicon](./book/images/favicon.ico) Learning Machine
 
-**[Straight forward machine learning based on answers and intuition for machine learners](https://rentruewang.github.io/learning-machine)**
+**[Straight forward machine learning based on answers and intuition for machine learners](https://learning-machine.pages.dev/)**
 
-[![Website](https://github.com/rentruewang/learning-machine/actions/workflows/github-pages.yaml/badge.svg)](https://github.com/rentruewang/learning-machine/actions/workflows/github-pages.yaml)
 [![Cleanup](https://github.com/rentruewang/learning-machine/actions/workflows/cleanup.yaml/badge.svg)](https://github.com/rentruewang/learning-machine/actions/workflows/cleanup.yaml)
 
 📚 **This handbook accompanies the course: [Machine Learning with Hung-Yi Lee](https://speech.ee.ntu.edu.tw/~hylee/ml/2021-spring.html)**
