@@ -56,7 +56,7 @@ We take openness and inclusiveness very seriously. We have adopted the following
     - [Back Propagation](./book/basics/gradients/back-prop.ipynb)
 - ### [Common Tasks](./book/tasks/tasks.ipynb)
   - [Regression](./book/tasks/regression/regression.ipynb)
-  - [Auto Regression](./book/tasks/regression/regression.ipynb)
+  - [Auto Regression](./book/tasks/regression/auto/auto.ipynb)
   - [Classification](./book/tasks/classification/classification.ipynb)
 - ### [Common Building Blocks](./book/layers/layers.ipynb)
   - [Linear](./book/layers/linear/linear.ipynb)
