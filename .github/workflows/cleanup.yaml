@@ -19,8 +19,6 @@ jobs:
 
       - name: ⬇️ Python Poetry
         uses: abatilo/actions-poetry@v2.0.0
-        with:
-          poetry-version: 3.9
       - name: ⬇️ Python Dependencies
         run: poetry install
 
