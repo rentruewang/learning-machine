@@ -19,11 +19,13 @@ jobs:
 
       - name: ⬇️ Python Poetry
         uses: abatilo/actions-poetry@v2.0.0
+        with:
+          poetry-version: 1.1.12
       - name: ⬇️ Python Dependencies
         run: poetry install
 
       - name: 🇺🇸 Build English version of the book
-        run: jupyter book build book
+        run: poetry run ./.venv/bin/jupyter-book build book
 
       - name: 🇺🇸 Deploy English book
         uses: JamesIves/github-pages-deploy-action@4.1.1
