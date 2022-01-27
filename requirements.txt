@@ -5,5 +5,4 @@ ipykernel
 ipython
 matplotlib
 numpy
-scipy
 torch
