@@ -33,7 +33,7 @@ jobs:
         run: cargo install fd-find
 
       - name: 🧹 Clear output of jupyter notebooks
-        run: fd -e ipynb | xargs -I{} -P0 poetry run ~/.venv/bin/jupyter-nbconvert --ClearOutputPreprocessor.enabled=True --inplace {}
+        run: fd -e ipynb -X poetry run ./.venv/bin/jupyter-nbconvert --ClearOutputPreprocessor.enabled=True --inplace
 
       - name: 🧹 Format all markdown files
         uses: actionsx/prettier@v2
