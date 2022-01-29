@@ -36,9 +36,7 @@ jobs:
         run: fd -e ipynb -X poetry run ./.venv/bin/jupyter-nbconvert --ClearOutputPreprocessor.enabled=True --inplace
 
       - name: 🧹 Format all markdown files
-        uses: actionsx/prettier@v2
-        with:
-          args: --write .
+        run: fd -e md -e yml -e yaml -X prettier --write
 
       - name: ⬆️ Add and Commit
         uses: EndBug/add-and-commit@v7
