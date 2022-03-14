@@ -2,7 +2,7 @@
 name = "learning-machine"
 version = "1.0.0"
 description = "Machine learning based on answers."
-authors = ["rentruewang <patrick1031wang@gmail.com>"]
+authors = ["RenChu Wang <patrick1031wang@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
