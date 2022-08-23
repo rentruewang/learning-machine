@@ -558,10 +558,10 @@ nbformat = "*"
 sqlalchemy = ">=1.3.12,<1.5"
 
 [package.extras]
-cli = ["click", "click-completion", "click-log", "tabulate", "pyyaml"]
-code_style = ["flake8 (>=3.7.0,<3.8.0)", "black", "pre-commit (==1.17.0)"]
-rtd = ["myst-nb (>=0.7,<1.0)", "sphinx-copybutton", "pydata-sphinx-theme"]
-testing = ["ipykernel", "coverage", "pytest (>=3.6,<4)", "pytest-cov", "pytest-regressions", "matplotlib", "numpy", "sympy", "pandas", "nbformat (>=5.1)"]
+testing = ["nbformat (>=5.1)", "pandas", "sympy", "numpy", "matplotlib", "pytest-regressions", "pytest-cov", "pytest (>=3.6,<4)", "coverage", "ipykernel"]
+rtd = ["pydata-sphinx-theme", "sphinx-copybutton", "myst-nb (>=0.7,<1.0)"]
+code_style = ["pre-commit (==1.17.0)", "black", "flake8 (>=3.7.0,<3.8.0)"]
+cli = ["pyyaml", "tabulate", "click-log", "click-completion", "click"]
 
 [[package]]
 name = "jupyter-client"
@@ -642,7 +642,7 @@ tornado = "*"
 traitlets = ">=4.1"
 
 [package.extras]
-test = ["nbformat", "nose", "pip", "requests", "mock"]
+test = ["mock", "requests", "pip", "nose", "nbformat"]
 
 [[package]]
 name = "jupyter-core"
@@ -739,7 +739,7 @@ python-versions = ">=3.7"
 jupyter-server = ">=1.1,<2.0"
 
 [package.extras]
-test = ["jupyter-server", "pytest"]
+test = ["pytest", "jupyter-server"]
 
 [[package]]
 name = "jupyter-sphinx"
@@ -825,10 +825,10 @@ python-versions = ">=3.6"
 uc-micro-py = "*"
 
 [package.extras]
-benchmark = ["pytest", "pytest-benchmark"]
-dev = ["pre-commit", "isort", "flake8", "black"]
-doc = ["sphinx", "sphinx-book-theme", "myst-parser"]
-test = ["coverage", "pytest", "pytest-cov"]
+test = ["pytest-cov", "pytest", "coverage"]
+doc = ["myst-parser", "sphinx-book-theme", "sphinx"]
+dev = ["black", "flake8", "isort", "pre-commit"]
+benchmark = ["pytest-benchmark", "pytest"]
 
 [[package]]
 name = "lxml"
@@ -856,12 +856,12 @@ python-versions = "~=3.6"
 attrs = ">=19,<22"
 
 [package.extras]
-code_style = ["pre-commit (==2.6)"]
-compare = ["commonmark (>=0.9.1,<0.10.0)", "markdown (>=3.2.2,<3.3.0)", "mistletoe-ebp (>=0.10.0,<0.11.0)", "mistune (>=0.8.4,<0.9.0)", "panflute (>=1.12,<2.0)"]
-linkify = ["linkify-it-py (>=1.0,<2.0)"]
+testing = ["pytest-regressions", "pytest-cov", "pytest-benchmark (>=3.2,<4.0)", "pytest (>=3.6,<4)", "psutil", "coverage"]
+rtd = ["sphinx-book-theme", "sphinx-panels (>=0.4.0,<0.5.0)", "sphinx-copybutton", "sphinx (>=2,<4)", "pyyaml", "myst-nb (==0.13.0a1)"]
 plugins = ["mdit-py-plugins"]
-rtd = ["myst-nb (==0.13.0a1)", "pyyaml", "sphinx (>=2,<4)", "sphinx-copybutton", "sphinx-panels (>=0.4.0,<0.5.0)", "sphinx-book-theme"]
-testing = ["coverage", "psutil", "pytest (>=3.6,<4)", "pytest-benchmark (>=3.2,<4.0)", "pytest-cov", "pytest-regressions"]
+linkify = ["linkify-it-py (>=1.0,<2.0)"]
+compare = ["panflute (>=1.12,<2.0)", "mistune (>=0.8.4,<0.9.0)", "mistletoe-ebp (>=0.10.0,<0.11.0)", "markdown (>=3.2.2,<3.3.0)", "commonmark (>=0.9.1,<0.10.0)"]
+code_style = ["pre-commit (==2.6)"]
 
 [[package]]
 name = "markupsafe"
@@ -913,9 +913,9 @@ python-versions = "~=3.6"
 markdown-it-py = ">=1.0,<2.0"
 
 [package.extras]
+testing = ["pytest-regressions", "pytest-cov", "pytest (>=3.6,<4)", "coverage"]
+rtd = ["sphinx-book-theme (>=0.1.0,<0.2.0)", "myst-parser (==0.14.0a3)"]
 code_style = ["pre-commit (==2.6)"]
-rtd = ["myst-parser (==0.14.0a3)", "sphinx-book-theme (>=0.1.0,<0.2.0)"]
-testing = ["coverage", "pytest (>=3.6,<4)", "pytest-cov", "pytest-regressions"]
 
 [[package]]
 name = "mistune"
@@ -1002,32 +1002,36 @@ test = ["ipython (<8.0.0)", "ipykernel", "ipywidgets (<8.0.0)", "pytest (>=4.1)"
 
 [[package]]
 name = "nbconvert"
-version = "6.4.2"
+version = "6.5.1"
 description = "Converting Jupyter Notebooks"
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 
 [package.dependencies]
+beautifulsoup4 = "*"
 bleach = "*"
 defusedxml = "*"
 entrypoints = ">=0.2.2"
-jinja2 = ">=2.4"
-jupyter-core = "*"
+jinja2 = ">=3.0"
+jupyter-core = ">=4.7"
 jupyterlab-pygments = "*"
+lxml = "*"
+MarkupSafe = ">=2.0"
 mistune = ">=0.8.1,<2"
-nbclient = ">=0.5.0,<0.6.0"
-nbformat = ">=4.4"
+nbclient = ">=0.5.0"
+nbformat = ">=5.1"
+packaging = "*"
 pandocfilters = ">=1.4.1"
 pygments = ">=2.4.1"
-testpath = "*"
+tinycss2 = "*"
 traitlets = ">=5.0"
 
 [package.extras]
-all = ["pytest", "pytest-cov", "pytest-dependency", "ipykernel", "ipywidgets (>=7)", "pyppeteer (>=1,<1.1)", "tornado (>=4.0)", "sphinx (>=1.5.1)", "sphinx-rtd-theme", "nbsphinx (>=0.2.12)", "ipython"]
+all = ["pytest", "pytest-cov", "pytest-dependency", "ipykernel", "ipywidgets (>=7)", "pre-commit", "pyppeteer (>=1,<1.1)", "tornado (>=6.1)", "sphinx (>=1.5.1)", "sphinx-rtd-theme", "nbsphinx (>=0.2.12)", "ipython"]
 docs = ["sphinx (>=1.5.1)", "sphinx-rtd-theme", "nbsphinx (>=0.2.12)", "ipython"]
-serve = ["tornado (>=4.0)"]
-test = ["pytest", "pytest-cov", "pytest-dependency", "ipykernel", "ipywidgets (>=7)", "pyppeteer (>=1,<1.1)"]
+serve = ["tornado (>=6.1)"]
+test = ["pytest", "pytest-cov", "pytest-dependency", "ipykernel", "ipywidgets (>=7)", "pre-commit", "pyppeteer (>=1,<1.1)"]
 webpdf = ["pyppeteer (>=1,<1.1)"]
 
 [[package]]
@@ -1293,8 +1297,8 @@ docutils = "!=0.17.0"
 sphinx = "*"
 
 [package.extras]
-coverage = ["pytest-cov", "codecov", "sphinx", "numpydoc", "recommonmark", "pandas", "pytest", "pytest-regressions", "beautifulsoup4", "sphinx-sitemap", "jupyter-sphinx", "plotly", "numpy", "xarray", "docutils (==0.16)"]
-test = ["sphinx", "numpydoc", "recommonmark", "pandas", "pytest", "pytest-regressions", "beautifulsoup4", "sphinx-sitemap", "jupyter-sphinx", "plotly", "numpy", "xarray", "docutils (==0.16)"]
+test = ["docutils (==0.16)", "xarray", "numpy", "plotly", "jupyter-sphinx", "sphinx-sitemap", "beautifulsoup4", "pytest-regressions", "pytest", "pandas", "recommonmark", "numpydoc", "sphinx"]
+coverage = ["docutils (==0.16)", "xarray", "numpy", "plotly", "jupyter-sphinx", "sphinx-sitemap", "beautifulsoup4", "pytest-regressions", "pytest", "pandas", "recommonmark", "numpydoc", "sphinx", "codecov", "pytest-cov"]
 
 [[package]]
 name = "pygments"
@@ -1412,7 +1416,7 @@ python-versions = ">=3.6"
 packaging = "*"
 
 [package.extras]
-test = ["pytest (>=6.0.0)", "pytest-cov (>=3.0.0)", "pytest-qt"]
+test = ["pytest-qt", "pytest-cov (>=3.0.0)", "pytest (>=6.0.0)"]
 
 [[package]]
 name = "requests"
@@ -1560,10 +1564,10 @@ pyyaml = "*"
 sphinx = ">=3,<5"
 
 [package.extras]
+testing = ["sphinx-thebe", "pytest-regressions (>=2.0.1,<2.1.0)", "pytest-cov", "pytest (>=6.0.1,<6.1.0)", "myst-nb (>=0.13,<1.0)", "coverage"]
+sphinx = ["sphinxext-opengraph", "sphinxcontrib-bibtex (>=2.2,<3.0)", "sphinx-thebe", "sphinx-togglebutton (>=0.2.1)", "sphinx-copybutton", "sphinx-design", "sphinx (>=4.0,<5.0)", "plotly", "pandas", "nbclient", "myst-nb (>=0.13,<1.0)", "matplotlib", "numpy", "folium", "ipywidgets", "ablog (>=0.10.13,<0.11.0)"]
+live-dev = ["web-compile (>=0.2.1,<0.3.0)", "sphinx-autobuild"]
 code_style = ["pre-commit (>=2.7.0,<2.8.0)"]
-live-dev = ["sphinx-autobuild", "web-compile (>=0.2.1,<0.3.0)"]
-sphinx = ["ablog (>=0.10.13,<0.11.0)", "ipywidgets", "folium", "numpy", "matplotlib", "myst-nb (>=0.13,<1.0)", "nbclient", "pandas", "plotly", "sphinx (>=4.0,<5.0)", "sphinx-design", "sphinx-copybutton", "sphinx-togglebutton (>=0.2.1)", "sphinx-thebe", "sphinxcontrib-bibtex (>=2.2,<3.0)", "sphinxext-opengraph"]
-testing = ["coverage", "myst-nb (>=0.13,<1.0)", "pytest (>=6.0.1,<6.1.0)", "pytest-cov", "pytest-regressions (>=2.0.1,<2.1.0)", "sphinx-thebe"]
 
 [[package]]
 name = "sphinx-comments"
@@ -1577,9 +1581,9 @@ python-versions = "*"
 sphinx = ">=1.8"
 
 [package.extras]
-code_style = ["flake8 (>=3.7.0,<3.8.0)", "black", "pre-commit (==1.17.0)"]
-sphinx = ["sphinx (>=2)", "sphinx-book-theme", "myst-parser"]
-testing = ["beautifulsoup4", "myst-parser", "pytest", "pytest-regressions", "sphinx (>=2)", "sphinx-book-theme"]
+testing = ["sphinx-book-theme", "sphinx (>=2)", "pytest-regressions", "pytest", "myst-parser", "beautifulsoup4"]
+sphinx = ["myst-parser", "sphinx-book-theme", "sphinx (>=2)"]
+code_style = ["pre-commit (==1.17.0)", "black", "flake8 (>=3.7.0,<3.8.0)"]
 
 [[package]]
 name = "sphinx-copybutton"
@@ -1593,8 +1597,8 @@ python-versions = ">=3.6"
 sphinx = ">=1.8"
 
 [package.extras]
+rtd = ["sphinx-book-theme", "myst-nb", "ipython", "sphinx"]
 code_style = ["pre-commit (==2.12.1)"]
-rtd = ["sphinx", "ipython", "myst-nb", "sphinx-book-theme"]
 
 [[package]]
 name = "sphinx-external-toc"
@@ -1611,9 +1615,9 @@ pyyaml = "*"
 sphinx = ">=3,<5"
 
 [package.extras]
+testing = ["pytest-regressions", "pytest-cov", "pytest (>=3.6,<4)", "coverage"]
+rtd = ["sphinx-book-theme (>=0.0.36)", "myst-parser (>=0.15.0,<0.16.0)"]
 code_style = ["pre-commit (>=2.12,<3.0)"]
-rtd = ["myst-parser (>=0.15.0,<0.16.0)", "sphinx-book-theme (>=0.0.36)"]
-testing = ["coverage", "pytest (>=3.6,<4)", "pytest-cov", "pytest-regressions"]
 
 [[package]]
 name = "sphinx-jupyterbook-latex"
@@ -1644,9 +1648,9 @@ python-versions = "*"
 sphinx = ">=3"
 
 [package.extras]
-code_style = ["flake8 (>=3.7.0,<3.8.0)", "black", "pre-commit (==1.17.0)"]
-rtd = ["sphinx (>=3.0)", "sphinx-book-theme", "myst-parser"]
-testing = ["pytest (>=5.4,<6.0)", "pytest-cov (>=2.8,<3.0)", "coverage (<5.0)", "pytest-regressions", "jupyter-book"]
+testing = ["jupyter-book", "pytest-regressions", "coverage (<5.0)", "pytest-cov (>=2.8,<3.0)", "pytest (>=5.4,<6.0)"]
+rtd = ["myst-parser", "sphinx-book-theme", "sphinx (>=3.0)"]
+code_style = ["pre-commit (==1.17.0)", "black", "flake8 (>=3.7.0,<3.8.0)"]
 
 [[package]]
 name = "sphinx-panels"
@@ -1661,10 +1665,10 @@ docutils = "*"
 sphinx = ">=2,<5"
 
 [package.extras]
+themes = ["myst-parser (>=0.12.9,<0.13.0)", "sphinx-book-theme (>=0.0.36,<0.1.0)", "pydata-sphinx-theme (>=0.4.0,<0.5.0)", "sphinx-rtd-theme"]
+testing = ["pytest-regressions (>=2.0.1,<2.1.0)", "pytest (>=6.0.1,<6.1.0)"]
+live-dev = ["web-compile (>=0.2.0,<0.3.0)", "sphinx-autobuild"]
 code_style = ["pre-commit (>=2.7.0,<2.8.0)"]
-live-dev = ["sphinx-autobuild", "web-compile (>=0.2.0,<0.3.0)"]
-testing = ["pytest (>=6.0.1,<6.1.0)", "pytest-regressions (>=2.0.1,<2.1.0)"]
-themes = ["sphinx-rtd-theme", "pydata-sphinx-theme (>=0.4.0,<0.5.0)", "sphinx-book-theme (>=0.0.36,<0.1.0)", "myst-parser (>=0.12.9,<0.13.0)"]
 
 [[package]]
 name = "sphinx-thebe"
@@ -1678,8 +1682,8 @@ python-versions = "*"
 sphinx = ">=3.5,<5"
 
 [package.extras]
-sphinx = ["matplotlib", "myst-nb", "sphinx-book-theme", "sphinx-copybutton", "sphinx-panels"]
-testing = ["matplotlib", "pytest", "pytest-regressions", "beautifulsoup4"]
+testing = ["beautifulsoup4", "pytest-regressions", "pytest", "matplotlib"]
+sphinx = ["sphinx-panels", "sphinx-copybutton", "sphinx-book-theme", "myst-nb", "matplotlib"]
 
 [[package]]
 name = "sphinx-togglebutton"
@@ -1694,7 +1698,7 @@ docutils = "*"
 sphinx = "*"
 
 [package.extras]
-sphinx = ["myst-parser", "sphinx-book-theme", "sphinx-design"]
+sphinx = ["sphinx-design", "sphinx-book-theme", "myst-parser"]
 
 [[package]]
 name = "sphinxcontrib-applehelp"
@@ -1705,8 +1709,8 @@ optional = false
 python-versions = ">=3.5"
 
 [package.extras]
-lint = ["flake8", "mypy", "docutils-stubs"]
 test = ["pytest"]
+lint = ["docutils-stubs", "mypy", "flake8"]
 
 [[package]]
 name = "sphinxcontrib-bibtex"
@@ -1731,8 +1735,8 @@ optional = false
 python-versions = ">=3.5"
 
 [package.extras]
-lint = ["flake8", "mypy", "docutils-stubs"]
 test = ["pytest"]
+lint = ["docutils-stubs", "mypy", "flake8"]
 
 [[package]]
 name = "sphinxcontrib-htmlhelp"
@@ -1743,8 +1747,8 @@ optional = false
 python-versions = ">=3.6"
 
 [package.extras]
-lint = ["flake8", "mypy", "docutils-stubs"]
-test = ["pytest", "html5lib"]
+test = ["html5lib", "pytest"]
+lint = ["docutils-stubs", "mypy", "flake8"]
 
 [[package]]
 name = "sphinxcontrib-jsmath"
@@ -1755,7 +1759,7 @@ optional = false
 python-versions = ">=3.5"
 
 [package.extras]
-test = ["pytest", "flake8", "mypy"]
+test = ["mypy", "flake8", "pytest"]
 
 [[package]]
 name = "sphinxcontrib-qthelp"
@@ -1766,8 +1770,8 @@ optional = false
 python-versions = ">=3.5"
 
 [package.extras]
-lint = ["flake8", "mypy", "docutils-stubs"]
 test = ["pytest"]
+lint = ["docutils-stubs", "mypy", "flake8"]
 
 [[package]]
 name = "sphinxcontrib-serializinghtml"
@@ -1778,8 +1782,8 @@ optional = false
 python-versions = ">=3.5"
 
 [package.extras]
-lint = ["flake8", "mypy", "docutils-stubs"]
 test = ["pytest"]
+lint = ["docutils-stubs", "mypy", "flake8"]
 
 [[package]]
 name = "sqlalchemy"
@@ -1827,7 +1831,7 @@ executing = "*"
 pure-eval = "*"
 
 [package.extras]
-tests = ["pytest", "typeguard", "pygments", "littleutils", "cython"]
+tests = ["cython", "littleutils", "pygments", "typeguard", "pytest"]
 
 [[package]]
 name = "terminado"
@@ -1846,15 +1850,19 @@ tornado = ">=4"
 test = ["pytest"]
 
 [[package]]
-name = "testpath"
-version = "0.5.0"
-description = "Test utilities for code working with files and commands"
+name = "tinycss2"
+version = "1.1.1"
+description = "A tiny CSS parser"
 category = "dev"
 optional = false
-python-versions = ">= 3.5"
+python-versions = ">=3.6"
+
+[package.dependencies]
+webencodings = ">=0.4"
 
 [package.extras]
-test = ["pytest", "pathlib2"]
+test = ["coverage", "pytest-isort", "pytest-flake8", "pytest-cov", "pytest"]
+doc = ["sphinx-rtd-theme", "sphinx"]
 
 [[package]]
 name = "toml"
@@ -1919,7 +1927,7 @@ optional = false
 python-versions = ">=3.6"
 
 [package.extras]
-test = ["coverage", "pytest", "pytest-cov"]
+test = ["pytest-cov", "pytest", "coverage"]
 
 [[package]]
 name = "urllib3"
@@ -1959,9 +1967,9 @@ optional = false
 python-versions = ">=3.6"
 
 [package.extras]
-docs = ["Sphinx (>=3.4)", "sphinx-rtd-theme (>=0.5)"]
-optional = ["python-socks", "wsaccel"]
 test = ["websockets"]
+optional = ["wsaccel", "python-socks"]
+docs = ["sphinx-rtd-theme (>=0.5)", "Sphinx (>=3.4)"]
 
 [[package]]
 name = "widgetsnbextension"
@@ -2583,8 +2591,8 @@ nbclient = [
     {file = "nbclient-0.5.11.tar.gz", hash = "sha256:751516992f34b58172bad54eef1e4bf7e4f4460d58e255ca1a4e5c9649476007"},
 ]
 nbconvert = [
-    {file = "nbconvert-6.4.2-py3-none-any.whl", hash = "sha256:7b006ae9979af56200e7fa3db39d9d12c99e811e8843b05dbe518e5b754bcb2e"},
-    {file = "nbconvert-6.4.2.tar.gz", hash = "sha256:eb2803db18f6facce6bf3b01b684fe47907994bd156d15eaccdf011e3d7f8164"},
+    {file = "nbconvert-6.5.1-py3-none-any.whl", hash = "sha256:0a3e224ee753ac4dceeb0257c4a315c069dcc6f9f4ae0ad15c5ea84713d15e28"},
+    {file = "nbconvert-6.5.1.tar.gz", hash = "sha256:2c01f3f518fee736c3d3f999dd20e0a16febba17a0d60a3b0fd28fbdec14115d"},
 ]
 nbdime = [
     {file = "nbdime-3.1.1-py2.py3-none-any.whl", hash = "sha256:ea4ddf919e3035800ef8bd5552b814522207cb154ca7512565e4539a54c74dbf"},
@@ -3048,9 +3056,9 @@ terminado = [
     {file = "terminado-0.13.1-py3-none-any.whl", hash = "sha256:f446b522b50a7aa68b5def0a02893978fb48cb82298b0ebdae13003c6ee6f198"},
     {file = "terminado-0.13.1.tar.gz", hash = "sha256:5b82b5c6e991f0705a76f961f43262a7fb1e55b093c16dca83f16384a7f39b7b"},
 ]
-testpath = [
-    {file = "testpath-0.5.0-py3-none-any.whl", hash = "sha256:8044f9a0bab6567fc644a3593164e872543bb44225b0e24846e2c89237937589"},
-    {file = "testpath-0.5.0.tar.gz", hash = "sha256:1acf7a0bcd3004ae8357409fc33751e16d37ccc650921da1094a86581ad1e417"},
+tinycss2 = [
+    {file = "tinycss2-1.1.1-py3-none-any.whl", hash = "sha256:fe794ceaadfe3cf3e686b22155d0da5780dd0e273471a51846d0a02bc204fec8"},
+    {file = "tinycss2-1.1.1.tar.gz", hash = "sha256:b2e44dd8883c360c35dd0d1b5aad0b610e5156c2cb3b33434634e539ead9d8bf"},
 ]
 toml = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
