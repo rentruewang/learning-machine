@@ -10,19 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 🔔 Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: 🏗️ python 3.9
-        uses: actions/setup-python@v2
+      - name: 🏗️ python 3.10.6
+        uses: actions/setup-python@v4
         with:
-          python-version: 3.9
+          python-version: 3.10.6
 
-      - name: ⬇️ Python Poetry
-        uses: abatilo/actions-poetry@v2.0.0
-        with:
-          poetry-version: 1.1.13
       - name: ⬇️ Python Dependencies
-        run: poetry install
+        run: pip install -r requirements.txt
 
       - name: 🏗️ Rust toolchain
         uses: actions-rs/toolchain@v1
@@ -32,14 +28,14 @@ jobs:
         run: cargo install fd-find
 
       - name: 🏗️ node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-verion: 16
       - name: ⬇️ all packages
         run: npm install
 
       - name: 🧹 Clear output of jupyter notebooks
-        run: fd -e ipynb -X poetry run python -m nbconvert --ClearOutputPreprocessor.enabled=True --inplace
+        run: fd -e ipynb -X jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace
 
       - name: 🧹 Format all markdown files
         run: fd -e md -e yml -e yaml -X npx prettier --write
