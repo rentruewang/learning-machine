@@ -5,7 +5,7 @@ description = "Machine learning based on answers."
 authors = ["RenChu Wang <patrick1031wang@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "learning_machine"}]
+repository = "https://github.com/rentruewang/learning-machine"
 
 [tool.poetry.dependencies]
 python = "^3.9"
