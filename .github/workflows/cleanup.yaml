@@ -25,11 +25,6 @@ jobs:
       - name: ⬇️ Python Dependencies
         run: poetry install
 
-      - name: 🏗️ Rust toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-
       - name: 🏗️ node
         uses: actions/setup-node@v3
         with:
