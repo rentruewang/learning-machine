@@ -12,11 +12,11 @@ python = "^3.9"
 
 [tool.poetry.group.dev.dependencies]
 black = "^22.10.0"
-jupyter-book = "^0.13.1"
+jupyter-book = "^0.15.1"
 matplotlib = "^3.6.2"
 numpy = "^1.23.5"
 scipy = "^1.9.3"
-torch = "^1.13.0"
+torch = "^2.0"
 
 [build-system]
 requires = ["poetry-core"]
