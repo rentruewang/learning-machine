@@ -1,23 +1,28 @@
-[tool.poetry]
+[project]
 name = "learning-machine"
-version = "0.1.0"
-description = "Machine learning based on answers."
-authors = ["RenChu Wang <patrick1031wang@gmail.com>"]
-license = "MIT"
+version = "0.0.5"
+description = "Machine learning based on answers"
+authors = [
+    {name = "RenChu Wang", email = "patrick1031wang@gmail.com"},
+]
+dependencies = [
+    "jupyter-book>=0.15.1",
+    "matplotlib>=3.8.2",
+    "numpy>=1.26.3",
+    "scipy>=1.11.4",
+    "torch>=2.1.2",
+]
+requires-python = "==3.10.*"
 readme = "README.md"
-repository = "https://github.com/rentruewang/learning-machine"
+license = {text = "Apache-2.0"}
 
-[tool.poetry.dependencies]
-python = "^3.9"
 
-[tool.poetry.group.dev.dependencies]
-black = "^22.10.0"
-jupyter-book = "^0.15.1"
-matplotlib = "^3.6.2"
-numpy = "^1.23.5"
-scipy = "^1.9.3"
-torch = "^2.0"
+[tool.pdm]
+package-type = "application"
 
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.pdm.dev-dependencies]
+format = [
+    "autoflake>=2.2.1",
+    "black>=23.12.1",
+    "isort>=5.13.2",
+]
