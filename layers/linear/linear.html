@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Linear Layer &#8212; Learning Machine</title>
   
@@ -19,15 +19,15 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -38,14 +38,12 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -72,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Calculate gradients for Linear Layers" href="linear-grad.html" />
     <link rel="prev" title="Layers" href="../layers.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -80,16 +78,7 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -123,20 +112,12 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <header>
   
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
-    </div>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-  </header>
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -151,11 +132,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
   
 
 <a class="navbar-brand logo" href="../../intro.html">
-  
   
   
   
@@ -165,8 +144,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/logo.png" class="logo__image only-light" alt="Learning Machine - Home"/>
-    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Learning Machine - Home"/>`);</script>
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -480,22 +459,20 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
@@ -535,20 +512,20 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="linear-layer">
-<h1>Linear Layer<a class="headerlink" href="#linear-layer" title="Permalink to this heading">#</a></h1>
+<h1>Linear Layer<a class="headerlink" href="#linear-layer" title="Permalink to this headline">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Sometimes, Linear Layers are also called Dense Layers, like in the toolkit Keras.</p>
 </div>
 <section id="what-do-linear-layers-do">
-<h2>What do linear layers do?<a class="headerlink" href="#what-do-linear-layers-do" title="Permalink to this heading">#</a></h2>
+<h2>What do linear layers do?<a class="headerlink" href="#what-do-linear-layers-do" title="Permalink to this headline">#</a></h2>
 <p>A linear layer transforms a vector into another vector. For example, you can transform a vector <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code> to <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4]</span></code> with a linear layer.</p>
 </section>
 <section id="when-to-use-linear-layers">
-<h2>When to use linear layers?<a class="headerlink" href="#when-to-use-linear-layers" title="Permalink to this heading">#</a></h2>
+<h2>When to use linear layers?<a class="headerlink" href="#when-to-use-linear-layers" title="Permalink to this headline">#</a></h2>
 <p>Use linear layers when you want to change a vector into another vector. This often happens when the target vector’s shape is different from the vector at hand.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -556,16 +533,69 @@ document.write(`
 </div>
 </section>
 <section id="how-does-a-linear-layer-work">
-<h2>How does a linear layer work?<a class="headerlink" href="#how-does-a-linear-layer-work" title="Permalink to this heading">#</a></h2>
+<h2>How does a linear layer work?<a class="headerlink" href="#how-does-a-linear-layer-work" title="Permalink to this headline">#</a></h2>
 <p>There are two components in a linear layer. A weight <span class="math notranslate nohighlight">\( W \)</span>, and a bias <span class="math notranslate nohighlight">\( B \)</span>. If the input of a linear layer is a vector <span class="math notranslate nohighlight">\( X \)</span>, then the output is <span class="math notranslate nohighlight">\( W X + B \)</span>.</p>
 <p>If the linear layer transforms a vector of dimension <span class="math notranslate nohighlight">\( N \)</span> to dimension <span class="math notranslate nohighlight">\( M \)</span>, then <span class="math notranslate nohighlight">\( W \)</span> is a <span class="math notranslate nohighlight">\( M \times N \)</span> matrix, <span class="math notranslate nohighlight">\( X \)</span> is of dimension <span class="math notranslate nohighlight">\( N \)</span>, <span class="math notranslate nohighlight">\( B \)</span> is of dimension <span class="math notranslate nohighlight">\( M \)</span>.</p>
 </section>
 <section id="linear-layers-in-code">
-<h2>Linear layers in code?<a class="headerlink" href="#linear-layers-in-code" title="Permalink to this heading">#</a></h2>
+<h2>Linear layers in code?<a class="headerlink" href="#linear-layers-in-code" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
 <span class="kn">from</span> <span class="nn">torch.nn</span> <span class="kn">import</span> <span class="n">Linear</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">OSError</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
+<span class="nn">File ~/work/learning-machine/learning-machine/.venv/lib/python3.10/site-packages/torch/__init__.py:168,</span> in <span class="ni">_load_global_deps</span><span class="nt">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">167</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">168</span>     <span class="n">ctypes</span><span class="o">.</span><span class="n">CDLL</span><span class="p">(</span><span class="n">lib_path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">ctypes</span><span class="o">.</span><span class="n">RTLD_GLOBAL</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span> <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">170</span>     <span class="c1"># Can only happen for wheel with cuda libs as PYPI deps</span>
+<span class="g g-Whitespace">    </span><span class="mi">171</span>     <span class="c1"># As PyTorch is not purelib, but nvidia-*-cu11 is</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/ctypes/__init__.py:374,</span> in <span class="ni">CDLL.__init__</span><span class="nt">(self, name, mode, handle, use_errno, use_last_error, winmode)</span>
+<span class="g g-Whitespace">    </span><span class="mi">373</span> <span class="k">if</span> <span class="n">handle</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">374</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_handle</span> <span class="o">=</span> <span class="n">_dlopen</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">375</span> <span class="k">else</span><span class="p">:</span>
+
+<span class="ne">OSError</span>: libcurand.so.10: cannot open shared object file: No such file or directory
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">torch</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">torch.nn</span> <span class="kn">import</span> <span class="n">Linear</span>
+
+<span class="n">File</span> <span class="o">~/</span><span class="n">work</span><span class="o">/</span><span class="n">learning</span><span class="o">-</span><span class="n">machine</span><span class="o">/</span><span class="n">learning</span><span class="o">-</span><span class="n">machine</span><span class="o">/.</span><span class="n">venv</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.10</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">torch</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">228</span>
+<span class="g g-Whitespace">    </span><span class="mi">217</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">218</span>     <span class="c1"># Easy way.  You want this most of the time, because it will prevent</span>
+<span class="g g-Whitespace">    </span><span class="mi">219</span>     <span class="c1"># C++ symbols from libtorch clobbering C++ symbols from other</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">225</span>     <span class="c1">#</span>
+<span class="g g-Whitespace">    </span><span class="mi">226</span>     <span class="c1"># See Note [Global dependencies]</span>
+<span class="g g-Whitespace">    </span><span class="mi">227</span>     <span class="k">if</span> <span class="n">USE_GLOBAL_DEPS</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">228</span>         <span class="n">_load_global_deps</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">229</span>     <span class="kn">from</span> <span class="nn">torch._C</span> <span class="kn">import</span> <span class="o">*</span>  <span class="c1"># noqa: F403</span>
+<span class="g g-Whitespace">    </span><span class="mi">231</span> <span class="c1"># Appease the type checker; ordinarily this binding is inserted by the</span>
+<span class="g g-Whitespace">    </span><span class="mi">232</span> <span class="c1"># torch._C module initialization code in C</span>
+
+<span class="nn">File ~/work/learning-machine/learning-machine/.venv/lib/python3.10/site-packages/torch/__init__.py:189,</span> in <span class="ni">_load_global_deps</span><span class="nt">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">187</span>     <span class="k">raise</span> <span class="n">err</span>
+<span class="g g-Whitespace">    </span><span class="mi">188</span> <span class="k">for</span> <span class="n">lib_folder</span><span class="p">,</span> <span class="n">lib_name</span> <span class="ow">in</span> <span class="n">cuda_libs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<span class="ne">--&gt; </span><span class="mi">189</span>     <span class="n">_preload_cuda_deps</span><span class="p">(</span><span class="n">lib_folder</span><span class="p">,</span> <span class="n">lib_name</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">190</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">CDLL</span><span class="p">(</span><span class="n">lib_path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">ctypes</span><span class="o">.</span><span class="n">RTLD_GLOBAL</span><span class="p">)</span>
+
+<span class="nn">File ~/work/learning-machine/learning-machine/.venv/lib/python3.10/site-packages/torch/__init__.py:154,</span> in <span class="ni">_preload_cuda_deps</span><span class="nt">(lib_folder, lib_name)</span>
+<span class="g g-Whitespace">    </span><span class="mi">152</span>         <span class="k">break</span>
+<span class="g g-Whitespace">    </span><span class="mi">153</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">lib_path</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">154</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">lib_name</span><span class="si">}</span><span class="s2"> not found in the system path </span><span class="si">{</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">155</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">CDLL</span><span class="p">(</span><span class="n">lib_path</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: libcublas.so.*[0-9] not found in the system path [&#39;/home/runner/work/learning-machine/learning-machine/book/layers/linear&#39;, &#39;/opt/hostedtoolcache/Python/3.10.13/x64/lib/python310.zip&#39;, &#39;/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10&#39;, &#39;/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/lib-dynload&#39;, &#39;&#39;, &#39;/home/runner/work/learning-machine/learning-machine/.venv/lib/python3.10/site-packages&#39;]
 </pre></div>
 </div>
 </div>
@@ -575,15 +605,6 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">linear</span> <span class="o">=</span> <span class="n">Linear</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">linear</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">detach</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">linear</span><span class="o">.</span><span class="n">bias</span><span class="o">.</span><span class="n">detach</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[-0.5705,  0.1307,  0.3208],
-        [ 0.2448,  0.3789, -0.4355],
-        [-0.4331,  0.1106, -0.4577],
-        [ 0.0289,  0.4461,  0.4132]])
-tensor([-0.0611, -0.1907,  0.0361, -0.1106])
 </pre></div>
 </div>
 </div>
@@ -597,13 +618,6 @@ tensor([-0.0611, -0.1907,  0.0361, -0.1106])
 <span class="nb">print</span><span class="p">(</span><span class="n">y1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">y2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">y1</span> <span class="o">==</span> <span class="n">y2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([ 0.5923, -0.4947, -1.5488,  2.0499], grad_fn=&lt;ViewBackward0&gt;)
-tensor([ 0.5923, -0.4947, -1.5488,  2.0499], grad_fn=&lt;AddBackward0&gt;)
-tensor([True, True, True, True])
 </pre></div>
 </div>
 </div>
@@ -639,10 +653,11 @@ tensor([True, True, True, True])
 
               
               
-              
-              
-                <footer class="prev-next-footer">
+                <footer class="bd-footer-article">
                   
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../layers.html"
@@ -662,7 +677,10 @@ tensor([True, True, True, True])
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -670,7 +688,6 @@ tensor([True, True, True, True])
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -703,7 +720,6 @@ By RenChu Wang
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
       © Copyright RenChu Wang, 2021.
@@ -730,8 +746,8 @@ By RenChu Wang
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

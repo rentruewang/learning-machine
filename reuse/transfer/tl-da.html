@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Transfer Learning and Domain Adaptation &#8212; Learning Machine</title>
   
@@ -19,15 +19,15 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -38,14 +38,12 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -72,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Transfer Learning vs Domain Adaptation" href="tl-vs-da.html" />
     <link rel="prev" title="Reusing Existing Models" href="../reuse.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -80,16 +78,7 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -123,20 +112,12 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <header>
   
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
-    </div>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-  </header>
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -151,11 +132,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
   
 
 <a class="navbar-brand logo" href="../../intro.html">
-  
   
   
   
@@ -165,8 +144,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/logo.png" class="logo__image only-light" alt="Learning Machine - Home"/>
-    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Learning Machine - Home"/>`);</script>
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -480,22 +459,20 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
@@ -538,10 +515,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="transfer-learning-and-domain-adaptation">
-<h1>Transfer Learning and Domain Adaptation<a class="headerlink" href="#transfer-learning-and-domain-adaptation" title="Permalink to this heading">#</a></h1>
+<h1>Transfer Learning and Domain Adaptation<a class="headerlink" href="#transfer-learning-and-domain-adaptation" title="Permalink to this headline">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>We will use the abbreviation TL for transfer learning.</p>
@@ -551,27 +528,27 @@ document.write(`
 <p>We will use the abbreviation DA for domain adaptation.</p>
 </div>
 <section id="when-do-we-need-tl-da">
-<h2>When do we need TL/DA?<a class="headerlink" href="#when-do-we-need-tl-da" title="Permalink to this heading">#</a></h2>
+<h2>When do we need TL/DA?<a class="headerlink" href="#when-do-we-need-tl-da" title="Permalink to this headline">#</a></h2>
 <p>Suppose that you are born and raised in the US, you’ve not learned a foreign language, and you’ve never been to another country. Now all of a sudden you are thrown into a small town in Russia, what would you think?</p>
 <p>Machine learning models feel the same way when you feed them completely different inputs. For example, when a model has only seen MNIST digits, but now you’re asking it to classify Full-HD, colorful, picturesque printed numbers taken from a photo, it’s no wonder that your model decides not to work.</p>
 <p>However, those Full-HD numbers are still numbers right? Sure they have something in common with MNIST? Indeed, the same number 1 share some traits and the same number 2 also are roughly similar (just like Russian and English, they are both from humans). But it’s still different enough that the machine learning model decides to give up.</p>
 <p>TL/DA aims to solve that. What TL/DA tries to do, is to make a model work across several similar environments that are different. By applying techniques in TL/DA, a model can perform better in not-so-similar-but-arguably-the-same environments, compared to the the environment where the model is trained.</p>
 </section>
 <section id="different-techniques-in-tl-da">
-<h2>Different techniques in TL/DA.<a class="headerlink" href="#different-techniques-in-tl-da" title="Permalink to this heading">#</a></h2>
+<h2>Different techniques in TL/DA.<a class="headerlink" href="#different-techniques-in-tl-da" title="Permalink to this headline">#</a></h2>
 <p>Most TL/DA methods fall in one of the following three categories.</p>
 <section id="discrepancy-based-methods">
-<h3>Discrepancy-based methods.<a class="headerlink" href="#discrepancy-based-methods" title="Permalink to this heading">#</a></h3>
+<h3>Discrepancy-based methods.<a class="headerlink" href="#discrepancy-based-methods" title="Permalink to this headline">#</a></h3>
 <p>Discrepancy-based methods utilize a <strong>feature-extractor</strong> and a very simple <strong>classifier</strong>. Those methods try to align the <strong>statistical measures</strong> of features of different domains.</p>
 <p>For example, we have a text feature-extractor, trained on news. Suppose that when reading from news, the mean of the features is <span class="math notranslate nohighlight">\( \mu \)</span> and the stddev <span class="math notranslate nohighlight">\( \sigma \)</span>. When reading from medical documents, the mean of the features is <span class="math notranslate nohighlight">\( \mu' \)</span> and the stddev <span class="math notranslate nohighlight">\( \sigma' \)</span>. A discrepancy-based method basically rescales the features extracted from the feature-extractor <span class="math notranslate nohighlight">\( x' \)</span> to <span class="math notranslate nohighlight">\( \frac{\sigma}{\sigma'} (x' - \mu') + \mu \)</span>. And then pass the rescaled features through the classifier.</p>
 </section>
 <section id="adversarial-based-methods">
-<h3>Adversarial-based methods.<a class="headerlink" href="#adversarial-based-methods" title="Permalink to this heading">#</a></h3>
+<h3>Adversarial-based methods.<a class="headerlink" href="#adversarial-based-methods" title="Permalink to this headline">#</a></h3>
 <p>Adversarial-based methods utilize a <strong>feature-extractor</strong> and a <strong>discriminator</strong>. Those methods aim to train a feature-extractor that extract features that are common to different domains.</p>
 <p>For example, we have an audio feature-extractor. When training on classical music and funk, both types are encoded into a feature vector, and the discriminator’s job is to tell apart classical music and funk. And we train it like a <a class="reference internal" href="../../generative/gan/gan.html"><span class="doc std std-doc">GAN</span></a>.</p>
 </section>
 <section id="reconstruction-based-methods">
-<h3>Reconstruction-based methods.<a class="headerlink" href="#reconstruction-based-methods" title="Permalink to this heading">#</a></h3>
+<h3>Reconstruction-based methods.<a class="headerlink" href="#reconstruction-based-methods" title="Permalink to this headline">#</a></h3>
 <p>Reconstruction-based methods try to utilize one <strong>encoder</strong> and multiple <strong>decoders</strong>. Those methods try to encode features that can be reconstructed by different decoders onto different domains.</p>
 <p>For example, we have an mammal image encoder, but an gorilla decoder and a monkey decoder. During training, the encoder tries to encode both images from gorilla domain, and monkey domain. The gorilla decoder would try to decode the gorilla images’ features into gorillas, and the monkey decoder would try to decode the monkey images’ features into monkeys.</p>
 </section>
@@ -605,10 +582,11 @@ document.write(`
 
               
               
-              
-              
-                <footer class="prev-next-footer">
+                <footer class="bd-footer-article">
                   
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../reuse.html"
@@ -628,7 +606,10 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -636,7 +617,6 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -672,7 +652,6 @@ By RenChu Wang
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
       © Copyright RenChu Wang, 2021.
@@ -699,8 +678,8 @@ By RenChu Wang
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

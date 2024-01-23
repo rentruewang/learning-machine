@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Batch size &#8212; Learning Machine</title>
   
@@ -19,15 +19,15 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -38,14 +38,12 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -70,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Gradient Vanishing / Gradient Explosion" href="../gradient/norm.html" />
     <link rel="prev" title="Other Things To Notice" href="../notice.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -78,16 +76,7 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -121,20 +110,12 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <header>
   
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
-    </div>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-  </header>
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -149,11 +130,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
   
 
 <a class="navbar-brand logo" href="../../intro.html">
-  
   
   
   
@@ -163,8 +142,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/logo.png" class="logo__image only-light" alt="Learning Machine - Home"/>
-    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Learning Machine - Home"/>`);</script>
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -478,22 +457,20 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
@@ -541,23 +518,23 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="batch-size">
-<h1>Batch size<a class="headerlink" href="#batch-size" title="Permalink to this heading">#</a></h1>
+<h1>Batch size<a class="headerlink" href="#batch-size" title="Permalink to this headline">#</a></h1>
 <section id="what-are-batches">
-<h2>What are batches<a class="headerlink" href="#what-are-batches" title="Permalink to this heading">#</a></h2>
+<h2>What are batches<a class="headerlink" href="#what-are-batches" title="Permalink to this headline">#</a></h2>
 <p>Machine learning models are usually trained on batches of data. A batch is simply a number (usually the power of 2), that a model trains itself on in an iteration. For example, batch size 32 means that the model takes in these 32 entries of data, averaging its output, and trains on the 32 labels of the entires.</p>
 </section>
 <section id="batch-size-too-small">
-<h2>Batch size too small<a class="headerlink" href="#batch-size-too-small" title="Permalink to this heading">#</a></h2>
+<h2>Batch size too small<a class="headerlink" href="#batch-size-too-small" title="Permalink to this headline">#</a></h2>
 <p>When batch sizes are too small, there are several issues that we may encounter.</p>
 <section id="training-takes-a-long-time">
-<h3>Training takes a long time.<a class="headerlink" href="#training-takes-a-long-time" title="Permalink to this heading">#</a></h3>
+<h3>Training takes a long time.<a class="headerlink" href="#training-takes-a-long-time" title="Permalink to this headline">#</a></h3>
 <p>When training on GPUs, data is sent to the GPU batch by batch, with the overhead of transfering data back and forth. If the batch size is too small, we spend a much higher percentage of time sending data than actually computing. This is the reason we usually prefer bigger batches.</p>
 </section>
 <section id="the-training-does-not-converge">
-<h3>The training does not converge.<a class="headerlink" href="#the-training-does-not-converge" title="Permalink to this heading">#</a></h3>
+<h3>The training does not converge.<a class="headerlink" href="#the-training-does-not-converge" title="Permalink to this headline">#</a></h3>
 <p>In probability theory, variance measures how much the input varies, how close on average are two inputs. Let’s plot two distributions with different variances.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -584,7 +561,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/471757829377f004ce1b8e7d5ae1a7fce8c9f968e7c3bd793272e75b77b1a3ae.png" src="../../_images/471757829377f004ce1b8e7d5ae1a7fce8c9f968e7c3bd793272e75b77b1a3ae.png" />
+<img alt="../../_images/013275f66f3c51f3eab5d5325b1f7d916f521a1f0da8e8677d74929b76d1cd9e.png" src="../../_images/013275f66f3c51f3eab5d5325b1f7d916f521a1f0da8e8677d74929b76d1cd9e.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -601,26 +578,26 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/ca90796ef86364d6811698b14a6f29d393621d33f02d790a5bd94b9ea394580a.png" src="../../_images/ca90796ef86364d6811698b14a6f29d393621d33f02d790a5bd94b9ea394580a.png" />
+<img alt="../../_images/555e14d1883600b60ceef96472fbc5678d8e164be33bfc62911501415e043068.png" src="../../_images/555e14d1883600b60ceef96472fbc5678d8e164be33bfc62911501415e043068.png" />
 </div>
 </div>
 <p>See how the first distribution is narrower than the second distribution. That means, the number sampled (numbers yielded from) the distribution is closer to one another, and changes little. A smaller variance helps the machine learning model to learn faster, because it’s easier to learn from a simpler input than from inputs that can change a lot. For that reason, averages are easier to learn than individuals.</p>
 </section>
 </section>
 <section id="batch-size-too-big">
-<h2>Batch size too big<a class="headerlink" href="#batch-size-too-big" title="Permalink to this heading">#</a></h2>
+<h2>Batch size too big<a class="headerlink" href="#batch-size-too-big" title="Permalink to this headline">#</a></h2>
 <section id="training-takes-a-lot-of-time">
-<h3>Training takes a lot of time.<a class="headerlink" href="#training-takes-a-lot-of-time" title="Permalink to this heading">#</a></h3>
+<h3>Training takes a lot of time.<a class="headerlink" href="#training-takes-a-lot-of-time" title="Permalink to this headline">#</a></h3>
 <p>When batch size is too big, trainig can also take a long time, but for different reasons. It’s again related to variance.</p>
 <p>There are certain problems in machine learning that gradients can be small, close to 0. In such a case, when the batch is overly big, the gradients can average so close to zero that it hinders progress of convergence. Well, worry not! Most of us aren’t rich enough to use those kind of batch sizes (because of expensive GPUs).</p>
 </section>
 </section>
 <section id="so-how-should-i-choose-batch-sizes">
-<h2>So, how should I choose batch sizes?<a class="headerlink" href="#so-how-should-i-choose-batch-sizes" title="Permalink to this heading">#</a></h2>
+<h2>So, how should I choose batch sizes?<a class="headerlink" href="#so-how-should-i-choose-batch-sizes" title="Permalink to this headline">#</a></h2>
 <p>Batch sizes are very tricky. Both too big and too small can make training very slow. So make sure to try different batch sizes and observe before commiting to training the whole dataset.</p>
 </section>
 <section id="is-it-possible-that-the-model-only-remembers-the-last-batch-it-sees">
-<h2>Is it possible that the model only remembers the last batch it sees?<a class="headerlink" href="#is-it-possible-that-the-model-only-remembers-the-last-batch-it-sees" title="Permalink to this heading">#</a></h2>
+<h2>Is it possible that the model only remembers the last batch it sees?<a class="headerlink" href="#is-it-possible-that-the-model-only-remembers-the-last-batch-it-sees" title="Permalink to this headline">#</a></h2>
 <p>Yes, in theory it’s possible that the model only remembers the last batch it sees if the model isn’t big enough or if you update too much. However, in practice, we iterate over the dataset over and over, and update the model little by little. It’s very unlikely that the model only remembers the last batch it has seen.</p>
 </section>
 </section>
@@ -650,10 +627,11 @@ document.write(`
 
               
               
-              
-              
-                <footer class="prev-next-footer">
+                <footer class="bd-footer-article">
                   
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../notice.html"
@@ -673,7 +651,10 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -681,7 +662,6 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -722,7 +702,6 @@ By RenChu Wang
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
       © Copyright RenChu Wang, 2021.
@@ -749,8 +728,8 @@ By RenChu Wang
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>
