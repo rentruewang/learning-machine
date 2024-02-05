@@ -33,7 +33,7 @@ jobs:
       - name: 🇺🇸 Deploy English book
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          branch: pages
+          branch: gh-pages
           folder: ./book/_build/html
           git-config-name: "github-actions[bot]"
           git-config-email: "github-actions[bot]@users.noreply.github.com"
