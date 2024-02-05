@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Transformer Block &#8212; Learning Machine</title>
   
@@ -19,15 +19,15 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -70,7 +72,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Attention" href="attn/attn.html" />
     <link rel="prev" title="Pooling Layer" href="../pooling/pooling.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,7 +80,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -112,12 +123,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <header>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
   
+  </header>
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -132,9 +151,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../../intro.html">
+  
   
   
   
@@ -144,8 +165,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Learning Machine - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Learning Machine - Home"/>`);</script>
   
   
 </a></div>
@@ -459,20 +480,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -513,22 +536,22 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="transformer-block">
-<h1>Transformer Block<a class="headerlink" href="#transformer-block" title="Permalink to this headline">#</a></h1>
+<h1>Transformer Block<a class="headerlink" href="#transformer-block" title="Permalink to this heading">#</a></h1>
 <section id="attention-is-all-you-need">
-<h2>Attention is all you need<a class="headerlink" href="#attention-is-all-you-need" title="Permalink to this headline">#</a></h2>
+<h2>Attention is all you need<a class="headerlink" href="#attention-is-all-you-need" title="Permalink to this heading">#</a></h2>
 <p>The transformer model comes out of the paper <em>attention is all you need</em>. The paper shows how powerful pure attention mechanisms can be. They introduced a new kind of attention mechanism called self-attention, which we’ll discuss later.</p>
 <p>The significance about self-attention is that with only attention mechanism, the model achieves state-of-the-art performance on many datasets, in a field previously dominated by RNNs.</p>
 </section>
 <section id="how-does-the-transformer-work">
-<h2>How does the transformer work?<a class="headerlink" href="#how-does-the-transformer-work" title="Permalink to this headline">#</a></h2>
+<h2>How does the transformer work?<a class="headerlink" href="#how-does-the-transformer-work" title="Permalink to this heading">#</a></h2>
 <p>The transformer architecture is based on a Seq2Seq model. Traditionally, a seq2seq model is basically an encoder and a decoder, like auto-encoders, but both encoder and decoder are RNNs. The encoder first process through the input, then feeds the encoder’s RNN state or output to the decoder to decode the full sentence. The idea is that the encoder should be able to encode the input into some kind of representation that contains the meaning of the sentence, and the decoder should be able to understand that representation.</p>
 <p>In the case of transformers, because it’s not an RNN, so instead of RNN state, the attention produced by the encoder is used and sent to the decoder. Decoder uses that global information to produce the output.</p>
 </section>
 <section id="transformer-encoder">
-<h2>Transformer encoder<a class="headerlink" href="#transformer-encoder" title="Permalink to this headline">#</a></h2>
+<h2>Transformer encoder<a class="headerlink" href="#transformer-encoder" title="Permalink to this heading">#</a></h2>
 <p>The encoding component is a stack of smaller encoders. An encoder does the following thing</p>
 <ol class="arabic simple">
 <li><p>Calculate self-attention score for the input <span class="math notranslate nohighlight">\( I \)</span>.</p></li>
@@ -542,12 +565,12 @@ document.write(`
 <p>An add-and-normalize layer performs a residual add, adding the input and the processed input.</p>
 </section>
 <section id="transformer-decoder">
-<h2>Transformer decoder<a class="headerlink" href="#transformer-decoder" title="Permalink to this headline">#</a></h2>
+<h2>Transformer decoder<a class="headerlink" href="#transformer-decoder" title="Permalink to this heading">#</a></h2>
 <p>The decoding component look a lot like the encoding component, it’s also a stack of decoders. Decoders are basically encoders, but they take the attention provided by encoders, and perform step <span class="math notranslate nohighlight">\( 3 \)</span> twice, the first time adds it by the decoder generated attention, the second time adds by the encoder generated attention.</p>
 <p>For transformers, the decoder is an auto-regressive model. In inference mode, what it does is no different from any other decoder. It takes in the sequence it previously generated (it uses <bos> it’s the first token being predicted), and predicts a new token. So what is the encoder doing? Turns out it is used for storing attention information. The stored information is then passed to decoders (on different layers) so that decoders know the meaning of the input sentence.</p>
 </section>
 <section id="positional-encoding">
-<h2>Positional encoding<a class="headerlink" href="#positional-encoding" title="Permalink to this headline">#</a></h2>
+<h2>Positional encoding<a class="headerlink" href="#positional-encoding" title="Permalink to this heading">#</a></h2>
 <p>Words in a sentence have different meanings if they are ordered differently. The sentence <em>Alice ate Bob</em> is very different in meaning to <em>Bob ate Alice</em>. Well, at least for Alice and Bob. For RNNs, that isn’t an issue. Because RNNs run over a sentence sequentially. So it will either see Alice or Bob first, and knows who appears to be eaten. However, transformers have no way of knowing who comes first because of how self-attention mechanism is symmetry to each position.</p>
 <p>That is the reason we need to add information for position to the model. In <em>Attention is all you need</em>, a positional encoding is added to the input. A positional encoding is basically an embedding, with different values for every indices, so that the model knows what a word’s position is when it processes it.</p>
 <p>A very interesting fact is that changing the order of the tokens does not actually change the output of the model (unlike RNNs), as long as the right positional encoding is associated with the right position. That means that after applying (usually by adding) positional encoding to the input word embedding vector, you can shuffle the order of the vector (along the time axis) all you want without affecting the output of the model. Very cool indeed.</p>
@@ -581,11 +604,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../pooling/pooling.html"
@@ -605,10 +627,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -616,6 +635,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -649,6 +669,7 @@ By RenChu Wang
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright RenChu Wang, 2021.
@@ -675,8 +696,8 @@ By RenChu Wang
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
 
   <footer class="bd-footer">
   </footer>
