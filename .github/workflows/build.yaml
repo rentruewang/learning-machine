@@ -1,37 +1,32 @@
-name: Website Build
-
-on:
-  push:
-    branches:
-      - main
-
+name: Build Pages
+on: [push]
 jobs:
   build-and-deploy:
-    name: 🌎 Build the pages
+    name: 📃 Website Build
     runs-on: ubuntu-latest
     steps:
-      - name: 🔔 Checkout
+      - name: 🔔 Check out
         uses: actions/checkout@v3
 
-      - name: 🏗️ python 3.10
+      - name: 🏗️ python
         uses: actions/setup-python@v4
         with:
           python-version: "3.10"
 
-      - name: ⬇️ Python PDM
-        uses: pdm-project/setup-pdm@v3
+      - name: ⬇️ Python Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: 1.8.4
+          installer-parallel: true
 
       - name: ⬇️ Python Dependencies
-        run: pdm install
+        run: poetry install --no-root
 
-      - name: 🚂 Activate environment
-        run: echo "$(pdm venv --path in-project)/bin" >> $GITHUB_PATH
+      - name: 🚧 Jupyter build
+        run: poetry run jupyter book build book
 
-      - name: 🇺🇸 Build English version of the book
-        run: jupyter-book build book
-
-      - name: 🇺🇸 Deploy English book
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+      - name: 📰 Publish docs
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: ./book/_build/html
