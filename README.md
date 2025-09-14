@@ -1,3 +1,7 @@
+### 🫙 Archive
+
+This was created at a time when I was TA for machine learning, aggregating students' questions and made them into a book. I don't see an update in the near future.
+
 # ![Favicon](./book/images/favicon.ico) Learning Machine
 
 **[Straight forward machine learning based on answers and intuition for machine learners](https://rentruewang.github.io/learning-machine/)**
