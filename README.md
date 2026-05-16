@@ -1,6 +1,8 @@
 ### 🫙 Archive
 
-This was created at a time when I was TA for machine learning, aggregating students' questions and made them into a book. I don't see an update in the near future.
+> This was created at a time when I was TA for machine learning, aggregating students' questions and made them into a book. I don't see an update in the near future.
+
+> Nowadays I'm mainly working on [`aioway`](https://github.com/rentruewang/aioway), a deep learning algorithm compiler! Check it out.
 
 # ![Favicon](./book/images/favicon.ico) Learning Machine
 
